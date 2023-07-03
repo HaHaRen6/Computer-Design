@@ -4,7 +4,7 @@
     "xci_name": "cpuclk",
     "component_reference": "xilinx.com:ip:clk_wiz:6.0",
     "ip_revision": "11",
-    "gen_directory": ".",
+    "gen_directory": "../../../../proj_single_cycle.gen/sources_1/ip/cpuclk",
     "parameters": {
       "component_parameters": {
         "Component_Name": [ { "value": "cpuclk", "resolve_type": "user", "usage": "all" } ],
@@ -122,7 +122,7 @@
         "CLKOUT5_DRIVES": [ { "value": "BUFG", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "CLKOUT6_DRIVES": [ { "value": "BUFG", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "CLKOUT7_DRIVES": [ { "value": "BUFG", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
-        "FEEDBACK_SOURCE": [ { "value": "FDBK_AUTO", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "FEEDBACK_SOURCE": [ { "value": "FDBK_AUTO", "resolve_type": "user", "usage": "all" } ],
         "CLKFB_IN_SIGNALING": [ { "value": "SINGLE", "resolve_type": "user", "usage": "all" } ],
         "CLKFB_IN_PORT": [ { "value": "clkfb_in", "resolve_type": "user", "usage": "all" } ],
         "CLKFB_IN_P_PORT": [ { "value": "clkfb_in_p", "resolve_type": "user", "usage": "all" } ],
@@ -601,7 +601,7 @@
         "IPCONTEXT": [ { "value": "IP_Flow" } ],
         "IPREVISION": [ { "value": "11" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "." } ],
+        "OUTPUTDIR": [ { "value": "../../../../proj_single_cycle.gen/sources_1/ip/cpuclk" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "." } ],
         "SWVERSION": [ { "value": "2022.2" } ],

@@ -5,8 +5,8 @@
   "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" \
-  "../../../../proj_single_cycle.srcs/sources_1/ip/cpuclk/cpuclk.v" \
+  "../../../../proj_single_cycle.gen/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" \
+  "../../../../proj_single_cycle.gen/sources_1/ip/cpuclk/cpuclk.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

@@ -148,6 +148,7 @@ module miniRV_SoC (
         .rdata_from_btn     (/* TODO */)
     );
 
+    // 64KB DRAM
     DRAM Mem_DRAM (
         .clk        (clk_bridge2dram),
         .a          (addr_bridge2dram[15:2]),

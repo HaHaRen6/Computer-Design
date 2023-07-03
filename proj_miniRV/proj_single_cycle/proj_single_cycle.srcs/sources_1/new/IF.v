@@ -1,3 +1,9 @@
+/*
+ * Instruction Fetch
+ *
+ * NPC, PC, IROM
+ */
+ 
 module IF (
     input wire rst,
     input wire clk,

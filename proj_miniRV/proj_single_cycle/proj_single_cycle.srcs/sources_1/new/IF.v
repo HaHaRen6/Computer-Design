@@ -3,7 +3,7 @@
  *
  * NPC, PC, IROM
  */
- 
+
 module IF (
     input wire rst,
     input wire clk,
@@ -56,6 +56,6 @@ module IF (
     /* IROM */
     assign IROM_adr = PC_pc;
     always @(*) begin
-        IROM_inst = 1;// TODO 取指令
+        IROM_inst = 1; // TODO 取指令
     end
 endmodule

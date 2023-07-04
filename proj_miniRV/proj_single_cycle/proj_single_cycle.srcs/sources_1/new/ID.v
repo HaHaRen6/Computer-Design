@@ -87,160 +87,161 @@ module ID (
             RF_reg[30] <= 32'b0;
             RF_reg[31] <= 32'b0;
         end
-        case (CU_rf_wsel)
-            // WB_ALU
-            2'b00:  begin
-                case(RF_wR)
-                    5'd0:  RF_reg[0]  <= ALU_C;
-                    5'd1:  RF_reg[1]  <= ALU_C;
-                    5'd2:  RF_reg[2]  <= ALU_C;
-                    5'd3:  RF_reg[3]  <= ALU_C;
-                    5'd4:  RF_reg[4]  <= ALU_C;
-                    5'd5:  RF_reg[5]  <= ALU_C;
-                    5'd6:  RF_reg[6]  <= ALU_C;
-                    5'd7:  RF_reg[7]  <= ALU_C;
-                    5'd8:  RF_reg[8]  <= ALU_C;
-                    5'd9:  RF_reg[9]  <= ALU_C;
-                    5'd10: RF_reg[10] <= ALU_C;
-                    5'd11: RF_reg[11] <= ALU_C;
-                    5'd12: RF_reg[12] <= ALU_C;
-                    5'd13: RF_reg[13] <= ALU_C;
-                    5'd14: RF_reg[14] <= ALU_C;
-                    5'd15: RF_reg[15] <= ALU_C;
-                    5'd16: RF_reg[16] <= ALU_C;
-                    5'd17: RF_reg[17] <= ALU_C;
-                    5'd18: RF_reg[18] <= ALU_C;
-                    5'd19: RF_reg[19] <= ALU_C;
-                    5'd20: RF_reg[20] <= ALU_C;
-                    5'd21: RF_reg[21] <= ALU_C;
-                    5'd22: RF_reg[22] <= ALU_C;
-                    5'd23: RF_reg[23] <= ALU_C;
-                    5'd24: RF_reg[24] <= ALU_C;
-                    5'd25: RF_reg[25] <= ALU_C;
-                    5'd26: RF_reg[26] <= ALU_C;
-                    5'd27: RF_reg[27] <= ALU_C;
-                    5'd28: RF_reg[28] <= ALU_C;
-                    5'd29: RF_reg[29] <= ALU_C;
-                    5'd30: RF_reg[30] <= ALU_C;
-                    5'd31: RF_reg[31] <= ALU_C;
-                endcase
-            end
+        if (RF_we) begin
+            case (CU_rf_wsel)
+                // WB_ALU
+                2'b00:  begin
+                    case(RF_wR)
+                        5'd0:  RF_reg[0]  <= ALU_C;
+                        5'd1:  RF_reg[1]  <= ALU_C;
+                        5'd2:  RF_reg[2]  <= ALU_C;
+                        5'd3:  RF_reg[3]  <= ALU_C;
+                        5'd4:  RF_reg[4]  <= ALU_C;
+                        5'd5:  RF_reg[5]  <= ALU_C;
+                        5'd6:  RF_reg[6]  <= ALU_C;
+                        5'd7:  RF_reg[7]  <= ALU_C;
+                        5'd8:  RF_reg[8]  <= ALU_C;
+                        5'd9:  RF_reg[9]  <= ALU_C;
+                        5'd10: RF_reg[10] <= ALU_C;
+                        5'd11: RF_reg[11] <= ALU_C;
+                        5'd12: RF_reg[12] <= ALU_C;
+                        5'd13: RF_reg[13] <= ALU_C;
+                        5'd14: RF_reg[14] <= ALU_C;
+                        5'd15: RF_reg[15] <= ALU_C;
+                        5'd16: RF_reg[16] <= ALU_C;
+                        5'd17: RF_reg[17] <= ALU_C;
+                        5'd18: RF_reg[18] <= ALU_C;
+                        5'd19: RF_reg[19] <= ALU_C;
+                        5'd20: RF_reg[20] <= ALU_C;
+                        5'd21: RF_reg[21] <= ALU_C;
+                        5'd22: RF_reg[22] <= ALU_C;
+                        5'd23: RF_reg[23] <= ALU_C;
+                        5'd24: RF_reg[24] <= ALU_C;
+                        5'd25: RF_reg[25] <= ALU_C;
+                        5'd26: RF_reg[26] <= ALU_C;
+                        5'd27: RF_reg[27] <= ALU_C;
+                        5'd28: RF_reg[28] <= ALU_C;
+                        5'd29: RF_reg[29] <= ALU_C;
+                        5'd30: RF_reg[30] <= ALU_C;
+                        5'd31: RF_reg[31] <= ALU_C;
+                    endcase
+                end
 
-            // WB_EXT
-            2'b01:  begin
-                case(RF_wR)
-                    5'd0:  RF_reg[0]  <= SEXT_ext;
-                    5'd1:  RF_reg[1]  <= SEXT_ext;
-                    5'd2:  RF_reg[2]  <= SEXT_ext;
-                    5'd3:  RF_reg[3]  <= SEXT_ext;
-                    5'd4:  RF_reg[4]  <= SEXT_ext;
-                    5'd5:  RF_reg[5]  <= SEXT_ext;
-                    5'd6:  RF_reg[6]  <= SEXT_ext;
-                    5'd7:  RF_reg[7]  <= SEXT_ext;
-                    5'd8:  RF_reg[8]  <= SEXT_ext;
-                    5'd9:  RF_reg[9]  <= SEXT_ext;
-                    5'd10: RF_reg[10] <= SEXT_ext;
-                    5'd11: RF_reg[11] <= SEXT_ext;
-                    5'd12: RF_reg[12] <= SEXT_ext;
-                    5'd13: RF_reg[13] <= SEXT_ext;
-                    5'd14: RF_reg[14] <= SEXT_ext;
-                    5'd15: RF_reg[15] <= SEXT_ext;
-                    5'd16: RF_reg[16] <= SEXT_ext;
-                    5'd17: RF_reg[17] <= SEXT_ext;
-                    5'd18: RF_reg[18] <= SEXT_ext;
-                    5'd19: RF_reg[19] <= SEXT_ext;
-                    5'd20: RF_reg[20] <= SEXT_ext;
-                    5'd21: RF_reg[21] <= SEXT_ext;
-                    5'd22: RF_reg[22] <= SEXT_ext;
-                    5'd23: RF_reg[23] <= SEXT_ext;
-                    5'd24: RF_reg[24] <= SEXT_ext;
-                    5'd25: RF_reg[25] <= SEXT_ext;
-                    5'd26: RF_reg[26] <= SEXT_ext;
-                    5'd27: RF_reg[27] <= SEXT_ext;
-                    5'd28: RF_reg[28] <= SEXT_ext;
-                    5'd29: RF_reg[29] <= SEXT_ext;
-                    5'd30: RF_reg[30] <= SEXT_ext;
-                    5'd31: RF_reg[31] <= SEXT_ext;
-                endcase
-            end
+                // WB_EXT
+                2'b01:  begin
+                    case(RF_wR)
+                        5'd0:  RF_reg[0]  <= SEXT_ext;
+                        5'd1:  RF_reg[1]  <= SEXT_ext;
+                        5'd2:  RF_reg[2]  <= SEXT_ext;
+                        5'd3:  RF_reg[3]  <= SEXT_ext;
+                        5'd4:  RF_reg[4]  <= SEXT_ext;
+                        5'd5:  RF_reg[5]  <= SEXT_ext;
+                        5'd6:  RF_reg[6]  <= SEXT_ext;
+                        5'd7:  RF_reg[7]  <= SEXT_ext;
+                        5'd8:  RF_reg[8]  <= SEXT_ext;
+                        5'd9:  RF_reg[9]  <= SEXT_ext;
+                        5'd10: RF_reg[10] <= SEXT_ext;
+                        5'd11: RF_reg[11] <= SEXT_ext;
+                        5'd12: RF_reg[12] <= SEXT_ext;
+                        5'd13: RF_reg[13] <= SEXT_ext;
+                        5'd14: RF_reg[14] <= SEXT_ext;
+                        5'd15: RF_reg[15] <= SEXT_ext;
+                        5'd16: RF_reg[16] <= SEXT_ext;
+                        5'd17: RF_reg[17] <= SEXT_ext;
+                        5'd18: RF_reg[18] <= SEXT_ext;
+                        5'd19: RF_reg[19] <= SEXT_ext;
+                        5'd20: RF_reg[20] <= SEXT_ext;
+                        5'd21: RF_reg[21] <= SEXT_ext;
+                        5'd22: RF_reg[22] <= SEXT_ext;
+                        5'd23: RF_reg[23] <= SEXT_ext;
+                        5'd24: RF_reg[24] <= SEXT_ext;
+                        5'd25: RF_reg[25] <= SEXT_ext;
+                        5'd26: RF_reg[26] <= SEXT_ext;
+                        5'd27: RF_reg[27] <= SEXT_ext;
+                        5'd28: RF_reg[28] <= SEXT_ext;
+                        5'd29: RF_reg[29] <= SEXT_ext;
+                        5'd30: RF_reg[30] <= SEXT_ext;
+                        5'd31: RF_reg[31] <= SEXT_ext;
+                    endcase
+                end
 
-            // WB_PC4
-            2'b10: begin
-                case(RF_wR)
-                    5'd0:  RF_reg[0]  <= NPC_pc4;
-                    5'd1:  RF_reg[1]  <= NPC_pc4;
-                    5'd2:  RF_reg[2]  <= NPC_pc4;
-                    5'd3:  RF_reg[3]  <= NPC_pc4;
-                    5'd4:  RF_reg[4]  <= NPC_pc4;
-                    5'd5:  RF_reg[5]  <= NPC_pc4;
-                    5'd6:  RF_reg[6]  <= NPC_pc4;
-                    5'd7:  RF_reg[7]  <= NPC_pc4;
-                    5'd8:  RF_reg[8]  <= NPC_pc4;
-                    5'd9:  RF_reg[9]  <= NPC_pc4;
-                    5'd10: RF_reg[10] <= NPC_pc4;
-                    5'd11: RF_reg[11] <= NPC_pc4;
-                    5'd12: RF_reg[12] <= NPC_pc4;
-                    5'd13: RF_reg[13] <= NPC_pc4;
-                    5'd14: RF_reg[14] <= NPC_pc4;
-                    5'd15: RF_reg[15] <= NPC_pc4;
-                    5'd16: RF_reg[16] <= NPC_pc4;
-                    5'd17: RF_reg[17] <= NPC_pc4;
-                    5'd18: RF_reg[18] <= NPC_pc4;
-                    5'd19: RF_reg[19] <= NPC_pc4;
-                    5'd20: RF_reg[20] <= NPC_pc4;
-                    5'd21: RF_reg[21] <= NPC_pc4;
-                    5'd22: RF_reg[22] <= NPC_pc4;
-                    5'd23: RF_reg[23] <= NPC_pc4;
-                    5'd24: RF_reg[24] <= NPC_pc4;
-                    5'd25: RF_reg[25] <= NPC_pc4;
-                    5'd26: RF_reg[26] <= NPC_pc4;
-                    5'd27: RF_reg[27] <= NPC_pc4;
-                    5'd28: RF_reg[28] <= NPC_pc4;
-                    5'd29: RF_reg[29] <= NPC_pc4;
-                    5'd30: RF_reg[30] <= NPC_pc4;
-                    5'd31: RF_reg[31] <= NPC_pc4;
-                endcase
-            end
+                // WB_PC4
+                2'b10: begin
+                    case(RF_wR)
+                        5'd0:  RF_reg[0]  <= NPC_pc4;
+                        5'd1:  RF_reg[1]  <= NPC_pc4;
+                        5'd2:  RF_reg[2]  <= NPC_pc4;
+                        5'd3:  RF_reg[3]  <= NPC_pc4;
+                        5'd4:  RF_reg[4]  <= NPC_pc4;
+                        5'd5:  RF_reg[5]  <= NPC_pc4;
+                        5'd6:  RF_reg[6]  <= NPC_pc4;
+                        5'd7:  RF_reg[7]  <= NPC_pc4;
+                        5'd8:  RF_reg[8]  <= NPC_pc4;
+                        5'd9:  RF_reg[9]  <= NPC_pc4;
+                        5'd10: RF_reg[10] <= NPC_pc4;
+                        5'd11: RF_reg[11] <= NPC_pc4;
+                        5'd12: RF_reg[12] <= NPC_pc4;
+                        5'd13: RF_reg[13] <= NPC_pc4;
+                        5'd14: RF_reg[14] <= NPC_pc4;
+                        5'd15: RF_reg[15] <= NPC_pc4;
+                        5'd16: RF_reg[16] <= NPC_pc4;
+                        5'd17: RF_reg[17] <= NPC_pc4;
+                        5'd18: RF_reg[18] <= NPC_pc4;
+                        5'd19: RF_reg[19] <= NPC_pc4;
+                        5'd20: RF_reg[20] <= NPC_pc4;
+                        5'd21: RF_reg[21] <= NPC_pc4;
+                        5'd22: RF_reg[22] <= NPC_pc4;
+                        5'd23: RF_reg[23] <= NPC_pc4;
+                        5'd24: RF_reg[24] <= NPC_pc4;
+                        5'd25: RF_reg[25] <= NPC_pc4;
+                        5'd26: RF_reg[26] <= NPC_pc4;
+                        5'd27: RF_reg[27] <= NPC_pc4;
+                        5'd28: RF_reg[28] <= NPC_pc4;
+                        5'd29: RF_reg[29] <= NPC_pc4;
+                        5'd30: RF_reg[30] <= NPC_pc4;
+                        5'd31: RF_reg[31] <= NPC_pc4;
+                    endcase
+                end
 
-            // WB_DRAM
-            default:  begin
-                case(RF_wR)
-                    5'd0:  RF_reg[0]  <= DRAM_rdo;
-                    5'd1:  RF_reg[1]  <= DRAM_rdo;
-                    5'd2:  RF_reg[2]  <= DRAM_rdo;
-                    5'd3:  RF_reg[3]  <= DRAM_rdo;
-                    5'd4:  RF_reg[4]  <= DRAM_rdo;
-                    5'd5:  RF_reg[5]  <= DRAM_rdo;
-                    5'd6:  RF_reg[6]  <= DRAM_rdo;
-                    5'd7:  RF_reg[7]  <= DRAM_rdo;
-                    5'd8:  RF_reg[8]  <= DRAM_rdo;
-                    5'd9:  RF_reg[9]  <= DRAM_rdo;
-                    5'd10: RF_reg[10] <= DRAM_rdo;
-                    5'd11: RF_reg[11] <= DRAM_rdo;
-                    5'd12: RF_reg[12] <= DRAM_rdo;
-                    5'd13: RF_reg[13] <= DRAM_rdo;
-                    5'd14: RF_reg[14] <= DRAM_rdo;
-                    5'd15: RF_reg[15] <= DRAM_rdo;
-                    5'd16: RF_reg[16] <= DRAM_rdo;
-                    5'd17: RF_reg[17] <= DRAM_rdo;
-                    5'd18: RF_reg[18] <= DRAM_rdo;
-                    5'd19: RF_reg[19] <= DRAM_rdo;
-                    5'd20: RF_reg[20] <= DRAM_rdo;
-                    5'd21: RF_reg[21] <= DRAM_rdo;
-                    5'd22: RF_reg[22] <= DRAM_rdo;
-                    5'd23: RF_reg[23] <= DRAM_rdo;
-                    5'd24: RF_reg[24] <= DRAM_rdo;
-                    5'd25: RF_reg[25] <= DRAM_rdo;
-                    5'd26: RF_reg[26] <= DRAM_rdo;
-                    5'd27: RF_reg[27] <= DRAM_rdo;
-                    5'd28: RF_reg[28] <= DRAM_rdo;
-                    5'd29: RF_reg[29] <= DRAM_rdo;
-                    5'd30: RF_reg[30] <= DRAM_rdo;
-                    5'd31: RF_reg[31] <= DRAM_rdo;
-                endcase
-            end
-
-        endcase
+                // WB_DRAM
+                default:  begin
+                    case(RF_wR)
+                        5'd0:  RF_reg[0]  <= DRAM_rdo;
+                        5'd1:  RF_reg[1]  <= DRAM_rdo;
+                        5'd2:  RF_reg[2]  <= DRAM_rdo;
+                        5'd3:  RF_reg[3]  <= DRAM_rdo;
+                        5'd4:  RF_reg[4]  <= DRAM_rdo;
+                        5'd5:  RF_reg[5]  <= DRAM_rdo;
+                        5'd6:  RF_reg[6]  <= DRAM_rdo;
+                        5'd7:  RF_reg[7]  <= DRAM_rdo;
+                        5'd8:  RF_reg[8]  <= DRAM_rdo;
+                        5'd9:  RF_reg[9]  <= DRAM_rdo;
+                        5'd10: RF_reg[10] <= DRAM_rdo;
+                        5'd11: RF_reg[11] <= DRAM_rdo;
+                        5'd12: RF_reg[12] <= DRAM_rdo;
+                        5'd13: RF_reg[13] <= DRAM_rdo;
+                        5'd14: RF_reg[14] <= DRAM_rdo;
+                        5'd15: RF_reg[15] <= DRAM_rdo;
+                        5'd16: RF_reg[16] <= DRAM_rdo;
+                        5'd17: RF_reg[17] <= DRAM_rdo;
+                        5'd18: RF_reg[18] <= DRAM_rdo;
+                        5'd19: RF_reg[19] <= DRAM_rdo;
+                        5'd20: RF_reg[20] <= DRAM_rdo;
+                        5'd21: RF_reg[21] <= DRAM_rdo;
+                        5'd22: RF_reg[22] <= DRAM_rdo;
+                        5'd23: RF_reg[23] <= DRAM_rdo;
+                        5'd24: RF_reg[24] <= DRAM_rdo;
+                        5'd25: RF_reg[25] <= DRAM_rdo;
+                        5'd26: RF_reg[26] <= DRAM_rdo;
+                        5'd27: RF_reg[27] <= DRAM_rdo;
+                        5'd28: RF_reg[28] <= DRAM_rdo;
+                        5'd29: RF_reg[29] <= DRAM_rdo;
+                        5'd30: RF_reg[30] <= DRAM_rdo;
+                        5'd31: RF_reg[31] <= DRAM_rdo;
+                    endcase
+                end
+            endcase
+        end
     end
 
     // 异步读

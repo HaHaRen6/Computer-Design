@@ -16,14 +16,13 @@ module IF (
     output reg [31:0] IROM_inst
 
 );
-    wire [31:0] NPC_pc;
+    wire [31:0] NPC_pc = PC_pc;
     reg [31:0] NPC_npc;
-    wire [31:0] PC_din;
+    wire [31:0] PC_din = NPC_npc;
     reg [31:0] PC_pc;
-    wire [31:0] IROM_adr;
+    wire [31:0] IROM_adr = PC_pc;
 
     /* NPC */
-    assign NPC_pc = PC_pc;
     assign NPC_pc4 = NPC_pc + 4;
     always @(*) begin
         case (NPC_op)
@@ -44,7 +43,6 @@ module IF (
     end
 
     /* PC */
-    assign PC_din = NPC_npc;
     always @ (negedge clk or posedge rst) begin
         if (rst) 
             PC_pc <= 32'h0000_0000;
@@ -54,8 +52,7 @@ module IF (
     end
 
     /* IROM */
-    assign IROM_adr = PC_pc;
     always @(*) begin
-        IROM_inst = 1; // TODO 取指令
+        // TODO 取指令
     end
 endmodule

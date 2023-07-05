@@ -8,10 +8,13 @@ module ID (
     input wire rst,
     input wire clk,
 
-    input wire [31:0] IROM_inst,
-    input wire CU_rf_we,
-    input wire CU_rf_wsel,
-    input wire [2:0] CU_sext_op,
+    input wire [4:0] RF_rR1,
+    input wire [4:0] RF_rR2,
+    input wire [4:0] RF_wR,
+    input wire RF_we,
+    input wire [24:0] SEXT_din, // = IROM_inst[31:7];
+    input wire RF_wsel,
+    input wire [2:0] SEXT_op,
     input wire [31:0] ALU_C,
     input wire [31:0] DRAM_rdo,
     input wire [31:0] NPC_pc4,
@@ -19,8 +22,7 @@ module ID (
     output reg [31:0] RF_rD2,
     output reg [31:0] SEXT_ext
 );
-    wire [24:0] SEXT_din = IROM_inst[31:7];
-    wire [2:0] SEXT_op = CU_sext_op;
+
     reg [31:0] RF_reg[31:0]; // 32个32bit寄存器
     integer i,j,k,l,ii,jj,iii;
 
@@ -41,14 +43,10 @@ module ID (
     end
 
     /* RF */
-    assign RF_rR1 = IROM_inst[19:15];
-    assign RF_rR2 = IROM_inst[24:20];
-    assign RF_wR = IROM_inst[11:7];
-    assign RF_we = CU_rf_we;
     // 同步写
     always @(posedge clk) begin
         if (RF_we) begin
-            case (CU_rf_wsel)
+            case (RF_wsel)
                 // WB_ALU
                 2'b00:  begin
                     for (i = 0; i < 32; i = i + 1) begin

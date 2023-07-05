@@ -5,9 +5,6 @@
  */
 
 module EX (
-    input wire rst,
-    input wire clk,
-
     input wire [31:0] NPC_aluin,
     input wire [31:0] NPC_offset,
     input wire NPC_br,

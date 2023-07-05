@@ -16,10 +16,10 @@ module IF (
     output reg [31:0] IROM_inst
 
 );
+    reg [31:0] PC_pc;
     wire [31:0] NPC_pc = PC_pc;
     reg [31:0] NPC_npc;
     wire [31:0] PC_din = NPC_npc;
-    reg [31:0] PC_pc;
     wire [31:0] IROM_adr = PC_pc;
 
     /* NPC */

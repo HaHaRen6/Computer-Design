@@ -13,6 +13,7 @@ module EX (
     input wire [31:0] RF_rD2,
     input wire [31:0] SEXT_ext,
     input wire [3:0] CU_alu_op,
+    input wire CU_alub_sel,
     output reg [31:0] ALU_C,
     output reg ALU_f,
     output wire [31:0] NPC_pc4,
@@ -20,17 +21,11 @@ module EX (
 
 );
     wire [31:0] ALU_A = RF_rD1;
-    reg [31:0] ALU_B;
-    wire ALU_B_sel;
+    wire ALU_B_sel = CU_alub_sel;
+    wire [31:0] ALU_B = ALU_B_sel ? SEXT_ext : RF_rD2;
     wire [3:0] ALU_op = CU_alu_op;
 
     /* ALU */
-    always @(*) begin 
-        if (ALU_B_sel == 1'b0)
-            ALU_B = RF_rD2;
-        else
-            ALU_B = SEXT_ext;
-    end
     always @(*) begin
         case (ALU_op)
             // ALU_ADD
@@ -71,4 +66,5 @@ module EX (
             end
         endcase
     end
+    // TODO B型和J型指令什么时候加上PC的值
 endmodule

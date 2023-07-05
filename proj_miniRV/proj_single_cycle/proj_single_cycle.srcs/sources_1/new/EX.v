@@ -9,21 +9,18 @@ module EX (
     input wire [31:0] NPC_offset,
     input wire NPC_br,
     input wire [1:0] NPC_op,
-    input wire [31:0] RF_rD1,
+    input wire [31:0] ALU_A,
     input wire [31:0] RF_rD2,
     input wire [31:0] SEXT_ext,
-    input wire [3:0] CU_alu_op,
-    input wire CU_alub_sel,
+    input wire [3:0] ALU_op,
+    input wire ALU_B_sel,
     output reg [31:0] ALU_C,
     output reg ALU_f,
     output wire [31:0] NPC_pc4,
     output reg [31:0] IROM_inst
 
 );
-    wire [31:0] ALU_A = RF_rD1;
-    wire ALU_B_sel = CU_alub_sel;
     wire [31:0] ALU_B = ALU_B_sel ? SEXT_ext : RF_rD2;
-    wire [3:0] ALU_op = CU_alu_op;
 
     /* ALU */
     always @(*) begin

@@ -12,7 +12,7 @@ module ID (
     input wire [4:0] RF_rR2,
     input wire [4:0] RF_wR,
     input wire RF_we,
-    input wire [24:0] SEXT_din, // = IROM_inst[31:7];
+    input wire [24:0] SEXT_din,
     input wire RF_wsel,
     input wire [2:0] SEXT_op,
     input wire [31:0] ALU_C,

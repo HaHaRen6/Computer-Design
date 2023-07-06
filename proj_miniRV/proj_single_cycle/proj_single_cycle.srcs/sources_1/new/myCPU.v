@@ -42,6 +42,15 @@ module myCPU (
     wire [31:0] RF_rD1;
     wire [31:0] RF_rD2;
 
+    always @(*) begin
+        case(CU_alu_op)
+            2'b00: RF_wD = ALU_C;
+            2'b01: RF_wD = SEXT_ext;
+            2'b10: RF_wD = NPC_pc4;
+            default: RF_wD = DRAM_rdo;
+        endcase
+    end
+
     // CU
     wire [2:0] CU_sext_op;
     wire [1:0] CU_npc_op;
@@ -72,12 +81,9 @@ module myCPU (
         .RF_rR2(IROM_inst[24:20]),
         .RF_wR(IROM_inst[11:7]),
         .RF_we(CU_rf_we),
+        .RF_wD(RF_wD),
         .SEXT_din(IROM_inst[31:7]),
-        .RF_wsel(CU_rf_wsel),
         .SEXT_op(CU_sext_op),
-        .ALU_C(ALU_C),
-        .DRAM_rdo(DRAM_rdo),
-        .NPC_pc4(NPC_pc4),
         .RF_rD1(RF_rD1),
         .RF_rD2(RF_rD2),
         .SEXT_ext(SEXT_ext)
@@ -109,10 +115,10 @@ module myCPU (
 
 `ifdef RUN_TRACE
     // Debug Interface
-    assign debug_wb_have_inst = /* TODO */;
+    assign debug_wb_have_inst = 1;
     assign debug_wb_pc        = PC_pc;
     assign debug_wb_ena       = RF_we;
-    assign debug_wb_reg       = RF_wR;
+    assign debug_wb_reg       = IROM_inst[11:7];
     assign debug_wb_value     = RF_wD;
 `endif
 

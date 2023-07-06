@@ -34,9 +34,9 @@ module ID (
             // EXT_S
             3'b001:  SEXT_ext = $signed({SEXT_din[24:18],SEXT_din[4:0]});
             // EXT_B
-            3'b010: SEXT_ext = $signed({SEXT_din[24],SEXT_din[0],SEXT_din[23:18],SEXT_din[4:1], 1'b0});
+            3'b010:  SEXT_ext = $signed({SEXT_din[24],SEXT_din[0],SEXT_din[23:18],SEXT_din[4:1], 1'b0});
             // EXT_U
-            3'b011: SEXT_ext = $signed({SEXT_din[24:5]});
+            3'b011:  SEXT_ext = $signed({SEXT_din[24:5]});
             // EXT_J
             default: SEXT_ext = $signed({SEXT_din[24], SEXT_din[12:5], SEXT_din[13], SEXT_din[23:14], 1'b0});
         endcase

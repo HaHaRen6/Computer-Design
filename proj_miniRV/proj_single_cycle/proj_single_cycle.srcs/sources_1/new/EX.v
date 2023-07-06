@@ -38,22 +38,22 @@ module EX (
             // ALU_BEQ
             4'b1100: begin
                 if (ALU_A == ALU_B)
-                    ALU_f <= 1;
+                    ALU_f = 1;
             end
             // ALU_BNE
             4'b1101: begin
                 if (ALU_A != ALU_B)
-                    ALU_f <= 1;
+                    ALU_f = 1;
             end
             // ALU_BLT
             4'b1110: begin
                 if (ALU_A < ALU_B)
-                    ALU_f <= 1;
+                    ALU_f = 1;
             end
             // ALU_BGE
             4'b1111: begin
                 if (ALU_A >= ALU_B)
-                    ALU_f <= 1;
+                    ALU_f = 1;
             end
         endcase
     end

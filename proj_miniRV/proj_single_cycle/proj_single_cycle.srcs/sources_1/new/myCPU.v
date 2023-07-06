@@ -41,15 +41,7 @@ module myCPU (
     // RF
     wire [31:0] RF_rD1;
     wire [31:0] RF_rD2;
-
-    always @(*) begin
-        case(CU_alu_op)
-            2'b00: RF_wD = ALU_C;
-            2'b01: RF_wD = SEXT_ext;
-            2'b10: RF_wD = NPC_pc4;
-            default: RF_wD = DRAM_rdo;
-        endcase
-    end
+    reg  [31:0] RF_wD;
 
     // CU
     wire [2:0] CU_sext_op;
@@ -63,6 +55,14 @@ module myCPU (
     // DRAM
     wire [31:0] DRAM_rdo = Bus_rdata;
 
+    always @(*) begin
+        case(CU_alu_op)
+            2'b00: RF_wD = ALU_C;
+            2'b01: RF_wD = SEXT_ext;
+            2'b10: RF_wD = NPC_pc4;
+            default: RF_wD = DRAM_rdo;
+        endcase
+    end
 
     IF IF (
         .rst(cpu_rst),

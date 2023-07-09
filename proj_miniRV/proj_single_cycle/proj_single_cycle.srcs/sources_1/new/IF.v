@@ -13,8 +13,8 @@ module IF (
     input wire NPC_br,
     input wire [1:0] NPC_op,
     output wire [31:0] NPC_pc4,
-    output reg  [31:0] PC_pc
-
+    output reg  [31:0] PC_pc,
+    output wire  [13:0] IROM_adr
 );
     wire [31:0] NPC_pc = PC_pc;
     reg  [31:0] NPC_npc;
@@ -40,12 +40,14 @@ module IF (
     end
 
     /* PC */
-    always @(negedge clk or posedge rst) begin
+    always @(posedge clk or posedge rst) begin
         if (rst) 
-            PC_pc <= 32'h0000_0000;
+            PC_pc <= 32'hFFFF_FFFC;
         else 
-            // 在时钟的下降沿更新PC，避免错误
             PC_pc <= PC_din;
     end
+
+    /* IROM */
+    assign IROM_adr = (PC_pc == 32'hFFFF_FFFC) ? 14'b0 : PC_pc[15:2];
 
 endmodule

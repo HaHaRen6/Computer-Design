@@ -6,7 +6,7 @@ module miniRV_SoC (
     input  wire         fpga_rst,   // High active
     input  wire         fpga_clk,
 
-    input  wire [23:0]  switch,
+    input  wire [23:0]  input_switch,
     input  wire [ 4:0]  button,
     output wire [ 7:0]  dig_en,
     output wire         DN_A,
@@ -80,8 +80,8 @@ module miniRV_SoC (
         .cpu_clk            (cpu_clk),
 
         // Interface to IROM
-        .inst_addr          (inst_addr),
-        .inst               (inst),
+        .IROM_adr           (inst_addr),
+        .IROM_inst          (inst),
 
         // Interface to Bridge
         .Bus_addr           (Bus_addr),

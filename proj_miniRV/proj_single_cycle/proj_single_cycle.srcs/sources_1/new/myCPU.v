@@ -50,19 +50,13 @@ module myCPU (
     wire [3:0] CU_alu_op;
     wire CU_alub_sel;
     wire CU_rf_we;
-    wire [1:0] CU_rf_wsel;
+    wire [1:0] CU_rf_wsel;   
 
     // DRAM
     wire [31:0] DRAM_rdo = Bus_rdata;
-
-    always @(*) begin
-        case(CU_alu_op)
-            2'b00: RF_wD = ALU_C;
-            2'b01: RF_wD = SEXT_ext;
-            2'b10: RF_wD = NPC_pc4;
-            default: RF_wD = DRAM_rdo;
-        endcase
-    end
+    assign Bus_addr = ALU_C;
+    assign Bus_wen = CU_ram_we;
+    assign Bus_wdata = RF_rD2; 
 
     IF IF (
         .rst(cpu_rst),
@@ -71,8 +65,19 @@ module myCPU (
         .NPC_offset(SEXT_ext),
         .NPC_op(CU_npc_op),
         .NPC_pc4(NPC_pc4),
-        .PC_pc(PC_pc)
+        .NPC_br(ALU_f),
+        .PC_pc(PC_pc),
+        .IROM_adr(IROM_adr)
     );
+
+    always @(*) begin
+        case(CU_rf_wsel)
+            2'b00: RF_wD = ALU_C;
+            2'b01: RF_wD = SEXT_ext;
+            2'b10: RF_wD = NPC_pc4;
+            default: RF_wD = DRAM_rdo;
+        endcase
+    end
 
     ID ID (
         .rst(cpu_rst),
@@ -111,13 +116,13 @@ module myCPU (
         .CU_rf_we(CU_rf_we),
         .CU_rf_wsel(CU_rf_wsel)
     );
-        
+
 
 `ifdef RUN_TRACE
     // Debug Interface
-    assign debug_wb_have_inst = 1;
+    assign debug_wb_have_inst = ~cpu_rst;
     assign debug_wb_pc        = PC_pc;
-    assign debug_wb_ena       = RF_we;
+    assign debug_wb_ena       = CU_rf_we;
     assign debug_wb_reg       = IROM_inst[11:7];
     assign debug_wb_value     = RF_wD;
 `endif

@@ -20,7 +20,7 @@ module EX (
     always @(*) begin
         case (ALU_op)
             // ALU_ADD
-            4'b0000: ALU_C = ALU_A + ALU_B;
+            4'b0001: ALU_C = ALU_A + ALU_B;
             // ALU_SUB
             4'b0010: ALU_C = ALU_A - ALU_B;
             // ALU_AND
@@ -30,30 +30,34 @@ module EX (
             // ALU_XOR
             4'b0101: ALU_C = ALU_A ^ ALU_B;
             // ALU_SLL
-            4'b1000: ALU_C = ALU_A << ALU_B;
+            4'b1000: ALU_C = ALU_A << ALU_B[4:0];
             // ALU_SRL
-            4'b1001: ALU_C = ALU_A >> ALU_B;
+            4'b1001: ALU_C = ALU_A >> ALU_B[4:0];
             // ALU_SRA
-            4'b1010: ALU_C = ALU_A >>> ALU_B;
+            4'b1010: ALU_C = $signed(ALU_A) >>> ALU_B[4:0];
             // ALU_BEQ
             4'b1100: begin
                 if (ALU_A == ALU_B)
                     ALU_f = 1;
+                else ALU_f = 0;
             end
             // ALU_BNE
             4'b1101: begin
                 if (ALU_A != ALU_B)
                     ALU_f = 1;
+                else ALU_f = 0;
             end
             // ALU_BLT
             4'b1110: begin
-                if (ALU_A < ALU_B)
+                if ($signed(ALU_A) < $signed(ALU_B))
                     ALU_f = 1;
+                else ALU_f = 0;
             end
             // ALU_BGE
             4'b1111: begin
-                if (ALU_A >= ALU_B)
+                if ($signed(ALU_A) >= $signed(ALU_B))
                     ALU_f = 1;
+                else ALU_f = 0;
             end
         endcase
     end

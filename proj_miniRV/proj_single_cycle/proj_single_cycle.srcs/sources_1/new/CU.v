@@ -50,7 +50,6 @@ module CU (
     parameter ALUB_RS2 = 1'b0;
     parameter ALUB_EXT = 1'b1;
 
-
     always @(*) begin 
         case (CU_opcode)
             // R-type
@@ -84,8 +83,8 @@ module CU (
                 CU_alub_sel = ALUB_EXT;
                 CU_ram_we   = 1'b0;
                 case (CU_funct3)
-                    // addi,subi
-                    3'b000: CU_alu_op = (CU_funct7 == 7'b0) ? ALU_ADD : ALU_SUB;
+                    // addi
+                    3'b000: CU_alu_op = ALU_ADD;
                     // andi
                     3'b111: CU_alu_op = ALU_AND;
                     // ori

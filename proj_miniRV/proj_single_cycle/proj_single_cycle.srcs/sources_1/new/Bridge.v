@@ -34,15 +34,9 @@ module Bridge (
     output wire [23:0]  wdata_to_led,
 
     // Interface to switches
-    // output wire         rst_to_sw,
-    // output wire         clk_to_sw,
-    // output wire [11:0]  addr_to_sw,
     input  wire [23:0]  rdata_from_sw,
 
     // Interface to buttons
-    // output wire         rst_to_btn,
-    // output wire         clk_to_btn,
-    // output wire [11:0]  addr_to_btn,
     input  wire [31:0]  rdata_from_btn
 );
 

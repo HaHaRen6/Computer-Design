@@ -8,8 +8,8 @@ parameter PERIOD  = 10;
 
 
 // miniRV_SoC Inputs
-reg   rst                             = 0 ;
-reg   clk                                   = 0 ;
+reg   rst                                  = 0 ;
+reg   clk                                  = 0 ;
 reg   [23:0]  Switch                       = 0 ;
 reg   [ 4:0]  button                       = 0 ;
 
@@ -45,8 +45,8 @@ wire  [23:0]  led;
 
 
 miniRV_SoC  u_miniRV_SoC (
-    .fpga_rst                      ( rst                             ),
-    .fpga_clk                      ( fpga_clk                            ),
+    .fpga_rst                      ( rst                                  ),
+    .fpga_clk                      ( fpga_clk                             ),
     .Switch                        ( Switch                        [23:0] ),
     .button                        ( button                        [ 4:0] ),
 

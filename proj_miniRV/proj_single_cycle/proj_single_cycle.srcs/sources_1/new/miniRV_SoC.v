@@ -48,7 +48,6 @@ module miniRV_SoC (
     wire [31:0] Bus_wdata;
     
     // Interface between bridge and DRAM
-    // wire         rst_bridge2dram;
     wire        clk_bridge2dram;
     wire [31:0] addr_bridge2dram;
     wire [31:0] rdata_dram2bridge;
@@ -95,16 +94,6 @@ module miniRV_SoC (
         .locked     (pll_lock)
     );
 `endif
-    
-    reg [2:0] part;
-    always @(posedge fpga_clk or posedge fpga_rst) begin
-        if (fpga_rst) begin
-            part <= 3'b0;
-        end
-        else  part <= part + 1'b1;
-    end
-
-    // assign cpu_clk = part[2];
 
     myCPU Core_cpu (
         .cpu_rst            (fpga_rst),
@@ -168,15 +157,9 @@ module miniRV_SoC (
         .wdata_to_led       (wdata_bridge2led),
 
         // Interface to switches
-        // .rst_to_sw          (rst_bridge2sw),
-        // .clk_to_sw          (clk_bridge2sw),
-        // .addr_to_sw         (addr_bridge2sw),
         .rdata_from_sw      (rdata_sw2bridge),
 
         // Interface to buttons
-        // .rst_to_btn         (rst_bridge2btn),
-        // .clk_to_btn         (clk_bridge2btn),
-        // .addr_to_btn        (addr_bridge2btn),
         .rdata_from_btn     (rdata_btn2bridge)
     );
 
@@ -213,6 +196,7 @@ module miniRV_SoC (
     assign DN_F = led_cx[2];
     assign DN_G = led_cx[1];
     assign DN_DP = led_cx[0];
+    
     Digital_LEDs Digital_LEDs (
         .rst(rst_bridge2dig),
         .clk(clk_bridge2dig),

@@ -29,34 +29,35 @@ module Bridge (
     // Interface to LEDs
     output wire         rst_to_led,
     output wire         clk_to_led,
-    output wire [11:0]  addr_to_led,
+    // output wire [11:0]  addr_to_led,
     output wire         wen_to_led,
-    output wire [31:0]  wdata_to_led,
+    output wire [23:0]  wdata_to_led,
 
     // Interface to switches
-    output wire         rst_to_sw,
-    output wire         clk_to_sw,
-    output wire [11:0]  addr_to_sw,
-    input  wire [31:0]  rdata_from_sw,
+    // output wire         rst_to_sw,
+    // output wire         clk_to_sw,
+    // output wire [11:0]  addr_to_sw,
+    input  wire [23:0]  rdata_from_sw,
 
     // Interface to buttons
-    output wire         rst_to_btn,
-    output wire         clk_to_btn,
-    output wire [11:0]  addr_to_btn,
+    // output wire         rst_to_btn,
+    // output wire         clk_to_btn,
+    // output wire [11:0]  addr_to_btn,
     input  wire [31:0]  rdata_from_btn
 );
 
+    // 根据CPU访问请求的地址判断当前访问的是什么设备
     wire access_mem = (addr_from_cpu[31:12] != 20'hFFFFF) ? 1'b1 : 1'b0;
     wire access_dig = (addr_from_cpu == `PERI_ADDR_DIG) ? 1'b1 : 1'b0;
     wire access_led = (addr_from_cpu == `PERI_ADDR_LED) ? 1'b1 : 1'b0;
     wire access_sw  = (addr_from_cpu == `PERI_ADDR_SW ) ? 1'b1 : 1'b0;
     wire access_btn = (addr_from_cpu == `PERI_ADDR_BTN) ? 1'b1 : 1'b0;
     
-    wire [4:0] access_bit = { access_mem,
-                              access_dig,
-                              access_led,
-                              access_sw,
-                              access_btn };
+    wire [4:0] access_bit = {   access_mem,
+                                access_dig,
+                                access_led,
+                                access_sw,
+                                access_btn };
 
     // DRAM
     // assign rst_to_dram  = rst_from_cpu;

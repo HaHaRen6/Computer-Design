@@ -61,5 +61,4 @@ module EX (
             end
         endcase
     end
-    // TODO B型和J型指令什么时候加上PC的值
 endmodule

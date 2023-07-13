@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="tb_miniRV_SoC_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="tb_miniRV_SoC" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="4,700.867 ns"></ZoomStartTime>
+      <ZoomEndTime time="5,675.659 ns"></ZoomEndTime>
+      <Cursor1Time time="76.610 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="148"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="49" />
+   <wvobject fp_name="/tb_miniRV_SoC/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/fpga_clk" type="logic">
+      <obj_property name="ElementShortName">fpga_clk</obj_property>
+      <obj_property name="ObjectShortName">fpga_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/cpu_clk" type="logic">
+      <obj_property name="ElementShortName">cpu_clk</obj_property>
+      <obj_property name="ObjectShortName">cpu_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/pll_clk" type="logic">
+      <obj_property name="ElementShortName">pll_clk</obj_property>
+      <obj_property name="ObjectShortName">pll_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/clk_lock" type="logic">
+      <obj_property name="ElementShortName">clk_lock</obj_property>
+      <obj_property name="ObjectShortName">clk_lock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/Switch" type="array">
+      <obj_property name="ElementShortName">Switch[23:0]</obj_property>
+      <obj_property name="ObjectShortName">Switch[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/button" type="array">
+      <obj_property name="ElementShortName">button[4:0]</obj_property>
+      <obj_property name="ObjectShortName">button[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/dig_en" type="array">
+      <obj_property name="ElementShortName">dig_en[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dig_en[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/led" type="array">
+      <obj_property name="ElementShortName">led[23:0]</obj_property>
+      <obj_property name="ObjectShortName">led[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Mem_IROM/a" type="array">
+      <obj_property name="ElementShortName">a[13:0]</obj_property>
+      <obj_property name="ObjectShortName">a[13:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Mem_IROM/spo" type="array">
+      <obj_property name="ElementShortName">spo[31:0]</obj_property>
+      <obj_property name="ObjectShortName">spo[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Core_cpu/IF/NPC_pc" type="array">
+      <obj_property name="ElementShortName">NPC_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NPC_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Core_cpu/IF/NPC_pc4" type="array">
+      <obj_property name="ElementShortName">NPC_pc4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NPC_pc4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Core_cpu/IF/NPC_op" type="array">
+      <obj_property name="ElementShortName">NPC_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NPC_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Core_cpu/CU/CU_rf_we" type="logic">
+      <obj_property name="ElementShortName">CU_rf_we</obj_property>
+      <obj_property name="ObjectShortName">CU_rf_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Core_cpu/CU/CU_rf_wsel" type="array">
+      <obj_property name="ElementShortName">CU_rf_wsel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">CU_rf_wsel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Core_cpu/ID/RF_wR" type="array">
+      <obj_property name="ElementShortName">RF_wR[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RF_wR[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Core_cpu/ID/RF_wD" type="array">
+      <obj_property name="ElementShortName">RF_wD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RF_wD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/rst_from_cpu" type="logic">
+      <obj_property name="ElementShortName">rst_from_cpu</obj_property>
+      <obj_property name="ObjectShortName">rst_from_cpu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/clk_from_cpu" type="logic">
+      <obj_property name="ElementShortName">clk_from_cpu</obj_property>
+      <obj_property name="ObjectShortName">clk_from_cpu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/addr_from_cpu" type="array">
+      <obj_property name="ElementShortName">addr_from_cpu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr_from_cpu[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/wen_from_cpu" type="logic">
+      <obj_property name="ElementShortName">wen_from_cpu</obj_property>
+      <obj_property name="ObjectShortName">wen_from_cpu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/wdata_from_cpu" type="array">
+      <obj_property name="ElementShortName">wdata_from_cpu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata_from_cpu[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/rdata_to_cpu" type="array">
+      <obj_property name="ElementShortName">rdata_to_cpu[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_to_cpu[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/access_mem" type="logic">
+      <obj_property name="ElementShortName">access_mem</obj_property>
+      <obj_property name="ObjectShortName">access_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/access_dig" type="logic">
+      <obj_property name="ElementShortName">access_dig</obj_property>
+      <obj_property name="ObjectShortName">access_dig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/access_led" type="logic">
+      <obj_property name="ElementShortName">access_led</obj_property>
+      <obj_property name="ObjectShortName">access_led</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/access_sw" type="logic">
+      <obj_property name="ElementShortName">access_sw</obj_property>
+      <obj_property name="ObjectShortName">access_sw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/access_bit" type="array">
+      <obj_property name="ElementShortName">access_bit[4:0]</obj_property>
+      <obj_property name="ObjectShortName">access_bit[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/LED/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/LED/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/LED/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/LED/wdata" type="array">
+      <obj_property name="ElementShortName">wdata[23:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/LED/LED_out" type="array">
+      <obj_property name="ElementShortName">LED_out[23:0]</obj_property>
+      <obj_property name="ObjectShortName">LED_out[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Bridge/rdata_from_sw" type="array">
+      <obj_property name="ElementShortName">rdata_from_sw[23:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata_from_sw[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/we" type="logic">
+      <obj_property name="ElementShortName">we</obj_property>
+      <obj_property name="ObjectShortName">we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/wdata" type="array">
+      <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/dig_en" type="array">
+      <obj_property name="ElementShortName">dig_en[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dig_en[7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/led_cx" type="array">
+      <obj_property name="ElementShortName">led_cx[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led_cx[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/cnt_end" type="logic">
+      <obj_property name="ElementShortName">cnt_end</obj_property>
+      <obj_property name="ObjectShortName">cnt_end</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/cnt_inc" type="logic">
+      <obj_property name="ElementShortName">cnt_inc</obj_property>
+      <obj_property name="ObjectShortName">cnt_inc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/cnt" type="array">
+      <obj_property name="ElementShortName">cnt[17:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/cnt_max" type="array">
+      <obj_property name="ElementShortName">cnt_max[17:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_max[17:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/NUM_ZERO" type="array">
+      <obj_property name="ElementShortName">NUM_ZERO[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_ZERO[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_miniRV_SoC/u_miniRV_SoC/Digital_LEDs/NUM_ONE" type="array">
+      <obj_property name="ElementShortName">NUM_ONE[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_ONE[7:0]</obj_property>
+   </wvobject>
+</wave_config>

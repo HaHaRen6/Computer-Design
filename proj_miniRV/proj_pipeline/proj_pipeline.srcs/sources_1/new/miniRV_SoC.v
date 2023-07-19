@@ -85,8 +85,8 @@ module miniRV_SoC (
     assign cpu_clk = fpga_clk;
 `else
     // 下板时，使用PLL分频后的时钟
-    assign cpu_clk = pll_clk & pll_lock;
-    // assign cpu_clk = fpga_clk;
+    // assign cpu_clk = pll_clk & pll_lock;
+    assign cpu_clk = fpga_clk;
     cpuclk Clkgen (
         // .resetn     (!fpga_rst),
         .clk_in1    (fpga_clk),

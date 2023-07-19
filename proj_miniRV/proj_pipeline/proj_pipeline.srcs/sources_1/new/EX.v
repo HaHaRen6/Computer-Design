@@ -1,20 +1,22 @@
 /*
  * Execute
  *
- * ALU
+ * ALU, NPC
  */
 
 module EX (
     input wire  [31:0] ALU_A,
-    input wire  [31:0] RF_rD2,
-    input wire  [31:0] SEXT_ext,
+    input wire  [31:0] ALU_B,
     input wire  [3:0] ALU_op,
-    input wire  ALU_B_sel,
     output reg  [31:0] ALU_C,
-    output reg  ALU_f
+
+    input wire [1:0] NPC_op,
+    input wire [31:0] NPC_offset,
+    input wire [31:0] NPC_pc,
+    output reg [31:0] NPC_npc
 
 );
-    wire [31:0] ALU_B = ALU_B_sel ? SEXT_ext : RF_rD2;
+    reg ALU_f;
 
     /* ALU */
     always @(*) begin
@@ -59,6 +61,28 @@ module EX (
                     ALU_f = 1;
                 else ALU_f = 0;
             end
+        endcase
+    end
+
+    wire NPC_br = ALU_f;
+    wire NPC_aluin = ALU_C;
+    wire NPC_pc4 = NPC_pc + 4;
+
+    /* NPC */
+    always @(*) begin
+        case (NPC_op)
+            // NPC_PC4
+            2'b00: NPC_npc = NPC_pc4; // TODO是否要删掉
+
+            // NPC_B
+            2'b01: NPC_npc = NPC_br ? NPC_pc + NPC_offset : NPC_pc4;
+
+            // NPC_JMP
+            2'b10: NPC_npc = NPC_pc + NPC_offset;
+
+            // NPC_JALR
+            default: NPC_npc = NPC_aluin;
+
         endcase
     end
 endmodule

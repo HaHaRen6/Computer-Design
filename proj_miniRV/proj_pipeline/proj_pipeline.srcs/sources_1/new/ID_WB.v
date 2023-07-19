@@ -1,13 +1,12 @@
 /*
- * Instruction Decode
+ * Instruction Decode & Write Back
  *
  * SEXT, RF
  */
 
-module ID (
+module ID_WB (
     input wire rst,
     input wire clk,
-
     input wire [4:0] RF_rR1,
     input wire [4:0] RF_rR2,
     input wire [4:0] RF_wR,

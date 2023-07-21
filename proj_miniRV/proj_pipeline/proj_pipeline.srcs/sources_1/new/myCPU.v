@@ -53,6 +53,9 @@ module myCPU (
     wire CU_alub_sel;
     wire CU_rf_we;
     wire [1:0] CU_rf_wsel;   
+    wire CU_PC_sel;
+    wire CU_reg_RE1;
+    wire CU_reg_RE2;
 
      // DRAM
     wire [31:0] DRAM_rdo = Bus_rdata;
@@ -71,7 +74,7 @@ module myCPU (
     reg         ID_EX_CU_rf_we;
     reg [ 1:0]  ID_EX_CU_npc_op;
     reg [31:0]  ID_EX_rD2;
-    reg [31:0]  ID_EX_rd;
+    reg [4:0]  ID_EX_rd;
     reg [31:0]  ID_EX_pc;
     reg [31:0]  ID_EX_pc4;
     reg [31:0]  ID_EX_SEXT_ext;
@@ -80,7 +83,7 @@ module myCPU (
     reg [ 1:0]  EX_MEM_CU_rf_wsel;
     reg [31:0]  EX_MEM_ALU_C;
     reg [31:0]  EX_MEM_rD2;
-    reg [31:0]  EX_MEM_rd;
+    reg [4:0]  EX_MEM_rd;
     reg [31:0]  EX_MEM_pc4;
     reg [31:0]  EX_MEM_pc;
     reg         EX_MEM_CU_rf_we;
@@ -88,11 +91,18 @@ module myCPU (
     
     reg [31:0]  MEM_WB_rf_wD;
     reg [31:0]  MEM_WB_pc;
-    reg [31:0]  MEM_WB_rd;
+    reg [4:0]  MEM_WB_rd;
     reg         MEM_WB_CU_rf_we;
     // reg [31:0]  MEM_WB_SEXT_ext;
 
-    assign PC_din = PC_pc4;
+    wire suspend_PC;
+    wire suspend_IF_ID;
+    wire suspend_ID_EX;
+
+    wire JMP_suspend = (IROM_inst[6:0] == 7'b1100011) | (IROM_inst[6:0] == 7'b1101111) | (IROM_inst[6:0] == 7'b1100111);
+
+    wire PC_din2 = CU_PC_sel ? NPC_npc : PC_pc4;
+    assign PC_din = suspend_PC ? PC_pc : PC_din2;
 
     IF IF (
         // input
@@ -113,7 +123,7 @@ module myCPU (
             IF_ID_pc4 <= 32'b0;
             IF_ID_inst <= 32'b0;
         end
-        else begin
+        else if (suspend_IF_ID) begin
             IF_ID_pc <= PC_pc;
             IF_ID_pc4 <= PC_pc4;
             IF_ID_inst <= IROM_inst;
@@ -126,7 +136,7 @@ module myCPU (
         .clk(cpu_clk),
         .RF_rR1(IF_ID_inst[19:15]),
         .RF_rR2(IF_ID_inst[24:20]),
-        .RF_wR(MEM_WB_rd),//TODO MEM
+        .RF_wR(MEM_WB_rd),
         .RF_we(MEM_WB_CU_rf_we),
         .RF_wD(MEM_WB_rf_wD),
         .SEXT_din(IF_ID_inst[31:7]),
@@ -149,7 +159,10 @@ module myCPU (
         .CU_alu_op(CU_alu_op),
         .CU_alub_sel(CU_alub_sel),
         .CU_rf_we(CU_rf_we),
-        .CU_rf_wsel(CU_rf_wsel)
+        .CU_rf_wsel(CU_rf_wsel),
+        .CU_PC_sel(CU_PC_sel),
+        .CU_reg_RE1(CU_reg_RE1),
+        .CU_reg_RE2(CU_reg_RE2)
     );
 
 
@@ -165,12 +178,12 @@ module myCPU (
             ID_EX_CU_rf_we <= 1'b0;
             ID_EX_CU_npc_op <= 2'b0;
             ID_EX_rD2 <= 32'b0;
-            ID_EX_rd <= 32'b0;
+            ID_EX_rd <= 5'b0;
             ID_EX_SEXT_ext <= 32'b0;
             ID_EX_pc4 <= 32'b0;
             ID_EX_pc <= 32'b0;
         end
-        else begin
+        else if (suspend_ID_EX) begin
             ID_EX_opA <= RF_rD1;
             ID_EX_opB <= CU_alub_sel ? SEXT_ext : RF_rD2;
             ID_EX_CU_ram_we <= CU_ram_we;
@@ -210,7 +223,7 @@ module myCPU (
             EX_MEM_CU_rf_we <= 1'b0;
             EX_MEM_CU_rf_wsel <= 2'b0;
             EX_MEM_CU_ram_we <= 1'b0;
-            EX_MEM_rd <= 32'b0;
+            EX_MEM_rd <= 5'b0;
             EX_MEM_ALU_C <= 32'b0;
             EX_MEM_rD2 <= 32'b0;
             EX_MEM_SEXT_ext <= 32'b0;
@@ -243,7 +256,7 @@ module myCPU (
     always @ (posedge cpu_clk or posedge cpu_rst) begin
         if (cpu_rst) begin
             MEM_WB_CU_rf_we <= 1'b0;
-            MEM_WB_rd <= 32'b0;
+            MEM_WB_rd <= 5'b0;
             MEM_WB_rf_wD <= 32'b0;
             MEM_WB_pc <= 32'b0;
         end
@@ -259,6 +272,28 @@ module myCPU (
             endcase
         end
     end
+
+    // Data Hazard Detector
+    Hazard Hazard(
+        // input
+        .rst(cpu_rst),
+        .clk(cpu_clk),
+        .JMP_suspend(JMP_suspend),
+        .IF_ID_rs1(IF_ID_rs1),
+        .IF_ID_rs2(IF_ID_rs2),
+        .ID_reg_re1(CU_reg_RE1),
+        .ID_reg_re2(CU_reg_RE2),
+        .ID_EX_CU_rf_we(ID_EX_CU_rf_we),
+        .ID_EX_rd(ID_EX_rd),
+        .EX_MEM_CU_rf_we(EX_MEM_CU_rf_we),
+        .EX_MEM_rd(EX_MEM_rd),
+        .MEM_WB_CU_rf_we(MEM_WB_CU_rf_we),
+        .MEM_WB_rd(MEM_WB_rd),
+        // output
+        .suspend_PC(suspend_PC),
+        .suspend_IF_ID(suspend_IF_ID),
+        .suspend_ID_EX(suspend_ID_EX)
+    );
 
 `ifdef RUN_TRACE
     // Debug Interface

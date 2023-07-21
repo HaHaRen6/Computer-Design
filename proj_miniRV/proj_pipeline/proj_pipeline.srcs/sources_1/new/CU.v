@@ -15,7 +15,10 @@ module CU (
     output reg [3:0] CU_alu_op,
     output reg CU_alub_sel,
     output reg CU_rf_we,
-    output reg [1:0] CU_rf_wsel
+    output reg [1:0] CU_rf_wsel,
+    output reg CU_PC_sel,
+    output reg CU_reg_RE1,
+    output reg CU_reg_RE2
 );
 
     parameter NPC_PC4  = 2'b00;
@@ -59,6 +62,9 @@ module CU (
                 CU_rf_wsel  = WB_ALU;
                 CU_alub_sel = ALUB_RS2;
                 CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b0;
+                CU_reg_RE1  = 1'b1;
+                CU_reg_RE2  = 1'b1;
                 case (CU_funct3)
                     // add,sub
                     3'b000: CU_alu_op = (CU_funct7 == 7'b0) ? ALU_ADD : ALU_SUB;
@@ -82,6 +88,9 @@ module CU (
                 CU_sext_op  = EXT_I;
                 CU_alub_sel = ALUB_EXT;
                 CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b0;
+                CU_reg_RE1  = 1'b1;
+                CU_reg_RE2  = 1'b0;
                 case (CU_funct3)
                     // addi
                     3'b000: CU_alu_op = ALU_ADD;
@@ -106,6 +115,9 @@ module CU (
                 CU_alu_op   = ALU_ADD;
                 CU_alub_sel = ALUB_EXT;
                 CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b0;
+                CU_reg_RE1  = 1'b1;
+                CU_reg_RE2  = 1'b0;
             end
             // jalr
             7'b1100111: begin
@@ -116,6 +128,9 @@ module CU (
                 CU_alu_op   = ALU_ADD;
                 CU_alub_sel = ALUB_EXT;
                 CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b1;
+                CU_reg_RE1  = 1'b1;
+                CU_reg_RE2  = 1'b0;
             end
             // S-type
             7'b0100011: begin
@@ -125,6 +140,9 @@ module CU (
                 CU_alu_op   = ALU_ADD;
                 CU_alub_sel = ALUB_EXT;
                 CU_ram_we   = 1'b1;
+                CU_PC_sel   = 1'b0;
+                CU_reg_RE1  = 1'b1;
+                CU_reg_RE2  = 1'b1;
             end
             // B-type
             7'b1100011: begin
@@ -133,6 +151,9 @@ module CU (
                 CU_sext_op  = EXT_B;
                 CU_alub_sel = ALUB_RS2;
                 CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b1;
+                CU_reg_RE1  = 1'b1;
+                CU_reg_RE2  = 1'b1;
                 case (CU_funct3)
                     // beq
                     3'b000: CU_alu_op = ALU_BEQ;
@@ -151,6 +172,9 @@ module CU (
                 CU_rf_wsel  = WB_EXT;
                 CU_sext_op  = EXT_U;
                 CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b0;
+                CU_reg_RE1  = 1'b0;
+                CU_reg_RE2  = 1'b0;
             end
             // J-type
             default: begin
@@ -159,6 +183,9 @@ module CU (
                 CU_rf_wsel  = WB_PC4;
                 CU_sext_op  = EXT_J;
                 CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b1;
+                CU_reg_RE1  = 1'b0;
+                CU_reg_RE2  = 1'b0;
             end
         endcase
     end

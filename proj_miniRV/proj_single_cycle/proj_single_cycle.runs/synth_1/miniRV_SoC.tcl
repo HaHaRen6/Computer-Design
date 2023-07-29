@@ -88,7 +88,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/IROM/testMachineCode.coe
-add_files d:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/IROM/myMachineCode.coe
+add_files D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/ip/IROM/myMachineCode.coe
 read_verilog D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/defines.vh
 set_property is_global_include true [get_files D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/defines.vh]
 read_verilog -library xil_defaultlib {
@@ -128,6 +128,8 @@ set_property used_in_implementation false [get_files D:/School/cpu/proj_miniRV/p
 read_xdc D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/constrs_1/new/miniRV_SoC.xdc
 set_property used_in_implementation false [get_files D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/constrs_1/new/miniRV_SoC.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

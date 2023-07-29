@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Jul 11 17:35:54 2023
-# Process ID: 7712
+# Start of session at: Fri Jul 14 14:51:25 2023
+# Process ID: 22512
 # Current directory: D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1
 # Command line: vivado.exe -log miniRV_SoC.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source miniRV_SoC.tcl
 # Log file: D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/miniRV_SoC.vds
@@ -18,21 +18,21 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 27272
+INFO: [Synth 8-7075] Helper process launched with PID 31244
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
-INFO: [Synth 8-11241] undeclared symbol 'addr_to_led', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:79]
-INFO: [Synth 8-11241] undeclared symbol 'rst_to_sw', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:84]
-INFO: [Synth 8-11241] undeclared symbol 'clk_to_sw', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:85]
-INFO: [Synth 8-11241] undeclared symbol 'addr_to_sw', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:86]
-INFO: [Synth 8-11241] undeclared symbol 'rst_to_btn', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:89]
-INFO: [Synth 8-11241] undeclared symbol 'clk_to_btn', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:90]
-INFO: [Synth 8-11241] undeclared symbol 'addr_to_btn', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:91]
+INFO: [Synth 8-11241] undeclared symbol 'addr_to_led', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:73]
+INFO: [Synth 8-11241] undeclared symbol 'rst_to_sw', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:78]
+INFO: [Synth 8-11241] undeclared symbol 'clk_to_sw', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:79]
+INFO: [Synth 8-11241] undeclared symbol 'addr_to_sw', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:80]
+INFO: [Synth 8-11241] undeclared symbol 'rst_to_btn', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:83]
+INFO: [Synth 8-11241] undeclared symbol 'clk_to_btn', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:84]
+INFO: [Synth 8-11241] undeclared symbol 'addr_to_btn', assumed default net type 'wire' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:85]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1840.723 ; gain = 408.621
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1839.859 ; gain = 405.203
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'miniRV_SoC' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:5]
-INFO: [Synth 8-6157] synthesizing module 'cpuclk' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-7712-HHR/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-7712-HHR/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpuclk' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-22512-HHR/realtime/cpuclk_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpuclk' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-22512-HHR/realtime/cpuclk_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'myCPU' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/myCPU.v:5]
 INFO: [Synth 8-6157] synthesizing module 'IF' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/IF.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'IF' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/IF.v:7]
@@ -45,22 +45,21 @@ INFO: [Synth 8-6157] synthesizing module 'CU' [D:/School/cpu/proj_miniRV/proj_si
 INFO: [Synth 8-155] case statement is not full and has no default [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/CU.v:136]
 INFO: [Synth 8-6155] done synthesizing module 'CU' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/CU.v:7]
 INFO: [Synth 8-6155] done synthesizing module 'myCPU' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/myCPU.v:5]
-INFO: [Synth 8-6157] synthesizing module 'IROM' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-7712-HHR/realtime/IROM_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'IROM' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-7712-HHR/realtime/IROM_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'IROM' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-22512-HHR/realtime/IROM_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'IROM' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-22512-HHR/realtime/IROM_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'Bridge' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'Bridge' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Bridge.v:5]
-WARNING: [Synth 8-689] width (32) of port connection 'wdata_to_led' does not match port width (24) of module 'Bridge' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:168]
-WARNING: [Synth 8-689] width (32) of port connection 'rdata_from_sw' does not match port width (24) of module 'Bridge' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:174]
-INFO: [Synth 8-6157] synthesizing module 'DRAM' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-7712-HHR/realtime/DRAM_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'DRAM' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-7712-HHR/realtime/DRAM_stub.v:5]
+WARNING: [Synth 8-689] width (32) of port connection 'wdata_to_led' does not match port width (24) of module 'Bridge' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [Synth 8-689] width (32) of port connection 'rdata_from_sw' does not match port width (24) of module 'Bridge' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:160]
+INFO: [Synth 8-6157] synthesizing module 'DRAM' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-22512-HHR/realtime/DRAM_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'DRAM' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/.Xil/Vivado-22512-HHR/realtime/DRAM_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'LED' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/LED.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'LED' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/LED.v:5]
-WARNING: [Synth 8-689] width (32) of port connection 'wdata' does not match port width (24) of module 'LED' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:201]
+WARNING: [Synth 8-689] width (32) of port connection 'wdata' does not match port width (24) of module 'LED' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:184]
 INFO: [Synth 8-6157] synthesizing module 'Digital_LEDs' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Digital_LEDs.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'Digital_LEDs' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/Digital_LEDs.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'miniRV_SoC' (0#1) [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:5]
-WARNING: [Synth 8-6014] Unused sequential element part_reg was removed.  [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:102]
-WARNING: [Synth 8-3848] Net rdata_btn2bridge in module/entity miniRV_SoC does not have driver. [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:80]
+WARNING: [Synth 8-3848] Net rdata_btn2bridge in module/entity miniRV_SoC does not have driver. [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/miniRV_SoC.v:79]
 WARNING: [Synth 8-7129] Port wdata[31] in module Digital_LEDs is either unconnected or has no load
 WARNING: [Synth 8-7129] Port wdata[30] in module Digital_LEDs is either unconnected or has no load
 WARNING: [Synth 8-7129] Port wdata[29] in module Digital_LEDs is either unconnected or has no load
@@ -92,18 +91,18 @@ WARNING: [Synth 8-7129] Port button[2] in module miniRV_SoC is either unconnecte
 WARNING: [Synth 8-7129] Port button[1] in module miniRV_SoC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port button[0] in module miniRV_SoC is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1938.828 ; gain = 506.727
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1938.969 ; gain = 504.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1938.828 ; gain = 506.727
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1938.969 ; gain = 504.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1938.828 ; gain = 506.727
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1938.969 ; gain = 504.312
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1938.828 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1938.969 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -121,23 +120,25 @@ Parsing XDC File [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.
 Finished Parsing XDC File [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/constrs_1/new/miniRV_SoC.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/constrs_1/new/miniRV_SoC.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/miniRV_SoC_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/miniRV_SoC_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2012.520 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2015.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2012.520 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2015.172 ; gain = 0.000
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2012.520 ; gain = 580.418
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2015.172 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2012.520 ; gain = 580.418
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2015.172 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -148,7 +149,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for Clkgen. (constraint file  auto ge
 Applied set_property KEEP_HIERARCHY = SOFT for Mem_IROM. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Mem_DRAM. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2012.520 ; gain = 580.418
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2015.172 ; gain = 580.516
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'RF_rD1_reg' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/ID.v:57]
 WARNING: [Synth 8-327] inferring latch for variable 'RF_rD2_reg' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/ID.v:61]
@@ -159,7 +160,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'CU_alu_op_reg' [D:/School/c
 WARNING: [Synth 8-327] inferring latch for variable 'CU_alub_sel_reg' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/CU.v:60]
 WARNING: [Synth 8-327] inferring latch for variable 'CU_rf_wsel_reg' [D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.srcs/sources_1/new/CU.v:59]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2012.520 ; gain = 580.418
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 2015.172 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -240,26 +241,26 @@ WARNING: [Synth 8-7129] Port button[2] in module miniRV_SoC is either unconnecte
 WARNING: [Synth 8-7129] Port button[1] in module miniRV_SoC is either unconnected or has no load
 WARNING: [Synth 8-7129] Port button[0] in module miniRV_SoC is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 2012.520 ; gain = 580.418
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 2015.172 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'fpga_clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 2012.520 ; gain = 580.418
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 2015.172 ; gain = 580.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 2146.355 ; gain = 714.254
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 2160.352 ; gain = 725.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -277,37 +278,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -348,18 +349,18 @@ Report Cell Usage:
 |20    |OBUF   |    40|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 40 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 2155.422 ; gain = 649.629
-Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:23 . Memory (MB): peak = 2155.422 ; gain = 723.320
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 2169.398 ; gain = 658.539
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 2169.398 ; gain = 734.742
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2167.309 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2181.293 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 341 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2170.965 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2184.977 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 107 instances were transformed.
   LD => LDCE: 43 instances
@@ -367,9 +368,9 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete, checksum: b33362dd
 INFO: [Common 17-83] Releasing license: Synthesis
-50 Infos, 76 Warnings, 0 Critical Warnings and 0 Errors encountered.
+50 Infos, 75 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:26 . Memory (MB): peak = 2170.965 ; gain = 1133.637
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:26 . Memory (MB): peak = 2184.977 ; gain = 1147.004
 INFO: [Common 17-1381] The checkpoint 'D:/School/cpu/proj_miniRV/proj_single_cycle/proj_single_cycle.runs/synth_1/miniRV_SoC.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file miniRV_SoC_utilization_synth.rpt -pb miniRV_SoC_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jul 11 17:36:25 2023...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 14 14:51:57 2023...

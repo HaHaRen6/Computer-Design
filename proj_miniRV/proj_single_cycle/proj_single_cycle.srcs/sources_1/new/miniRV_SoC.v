@@ -154,7 +154,7 @@ module miniRV_SoC (
         .clk_to_led         (clk_bridge2led),
         // .addr_to_led        (addr_bridge2led),
         .wen_to_led         (wen_bridge2led),
-        .wdata_to_led       (wdata_bridge2led),
+        .wdata_to_led       (wdata_bridge2led[23:0]),
 
         // Interface to switches
         .rdata_from_sw      (rdata_sw2bridge),

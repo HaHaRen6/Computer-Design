@@ -1,0 +1,115 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sun Jul 23 14:29:53 2023
+[*]
+[dumpfile] "C:\Users\haharen\Downloads\add.vcd"
+[dumpfile_mtime] "Sun Jul 23 14:29:52 2023"
+[dumpfile_size] 23073
+[savefile] "C:\Users\haharen\Downloads\add.gtkw"
+[timestart] 183
+[size] 1266 1408
+[pos] -1 -1
+*-4.942880 250 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TOP.
+[treeopen] TOP.miniRV_SoC.
+[treeopen] TOP.miniRV_SoC.Core_cpu.
+[sst_width] 197
+[signals_width] 266
+[sst_expanded] 1
+[sst_vpaned_height] 437
+@22
+TOP.miniRV_SoC.Mem_IROM.a[15:0]
+TOP.miniRV_SoC.Mem_IROM.spo[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.cpu_clk
+TOP.miniRV_SoC.Core_cpu.cpu_rst
+@22
+TOP.miniRV_SoC.Core_cpu.RF_wD[31:0]
+TOP.miniRV_SoC.Core_cpu.NPC_pc4[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.CU.CU_opcode[6:0]
+TOP.miniRV_SoC.Core_cpu.Hazard.JMP_suspend
+TOP.miniRV_SoC.Core_cpu.Hazard.suspend_PC
+TOP.miniRV_SoC.Core_cpu.Hazard.suspend_IF_ID
+TOP.miniRV_SoC.Core_cpu.Hazard.suspend_ID_EX
+TOP.miniRV_SoC.Core_cpu.Hazard.suspend_continue
+@22
+TOP.miniRV_SoC.Core_cpu.IF.PC_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.IF.PC_pc4[31:0]
+TOP.miniRV_SoC.Core_cpu.IF.PC_din[31:0]
+TOP.miniRV_SoC.Core_cpu.PC_din2[31:0]
+TOP.miniRV_SoC.Core_cpu.NPC_npc[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.CU_PC_sel
+TOP.miniRV_SoC.Core_cpu.ID_EX_CU_PC_sel
+@22
+TOP.miniRV_SoC.Core_cpu.IF.IROM_adr[13:0]
+TOP.miniRV_SoC.Core_cpu.IROM_inst[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.IF_have_inst
+TOP.miniRV_SoC.Core_cpu.IF_ID_have_inst
+TOP.miniRV_SoC.Core_cpu.ID_EX_have_inst
+TOP.miniRV_SoC.Core_cpu.EX_MEM_have_inst
+TOP.miniRV_SoC.Core_cpu.MEM_WB_have_inst
+TOP.miniRV_SoC.Core_cpu.debug_wb_have_inst
+TOP.miniRV_SoC.Core_cpu.debug_wb_ena
+@22
+TOP.miniRV_SoC.Core_cpu.debug_wb_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.debug_wb_reg[4:0]
+TOP.miniRV_SoC.Core_cpu.debug_wb_value[31:0]
+TOP.miniRV_SoC.Core_cpu.PC_din2[31:0]
+TOP.miniRV_SoC.Core_cpu.IF_ID_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.IF_ID_inst[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.IF_ID_have_inst
+TOP.miniRV_SoC.Core_cpu.Hazard.timer1[1:0]
+TOP.miniRV_SoC.Core_cpu.Hazard.timer2[1:0]
+@22
+TOP.miniRV_SoC.Core_cpu.IF_ID_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.ID_EX_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.EX_MEM_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.MEM_WB_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.ID_EX_rd[4:0]
+TOP.miniRV_SoC.Core_cpu.EX_MEM_rd[4:0]
+TOP.miniRV_SoC.Core_cpu.MEM_WB_rd[4:0]
+@28
+TOP.miniRV_SoC.Core_cpu.IF_ID_have_inst
+@22
+TOP.miniRV_SoC.Core_cpu.IF_ID_inst[31:0]
+TOP.miniRV_SoC.Core_cpu.IF_ID_pc[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.IF_ID_rs1
+TOP.miniRV_SoC.Core_cpu.IF_ID_rs2
+TOP.miniRV_SoC.Core_cpu.ID_EX_CU_PC_sel
+TOP.miniRV_SoC.Core_cpu.ID_EX_CU_rf_we
+TOP.miniRV_SoC.Core_cpu.ID_EX_CU_rf_wsel[1:0]
+@22
+TOP.miniRV_SoC.Core_cpu.ID_EX_SEXT_ext[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.ID_EX_have_inst
+@22
+TOP.miniRV_SoC.Core_cpu.ID_EX_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.ID_EX_rd[4:0]
+TOP.miniRV_SoC.Core_cpu.EX_MEM_ALU_C[31:0]
+TOP.miniRV_SoC.Core_cpu.EX_MEM_pc[31:0]
+TOP.miniRV_SoC.Core_cpu.EX_MEM_rD2[31:0]
+TOP.miniRV_SoC.Core_cpu.EX_MEM_rd[4:0]
+@28
+TOP.miniRV_SoC.Core_cpu.Hazard.ID_reg_re1
+TOP.miniRV_SoC.Core_cpu.Hazard.ID_reg_re2
+@25
+TOP.miniRV_SoC.Core_cpu.Hazard.ID_EX_rd[4:0]
+@22
+TOP.miniRV_SoC.Core_cpu.Hazard.EX_MEM_rd[4:0]
+TOP.miniRV_SoC.Core_cpu.Hazard.MEM_WB_rd[4:0]
+TOP.miniRV_SoC.Core_cpu.Hazard.IF_ID_rs1[31:0]
+TOP.miniRV_SoC.Core_cpu.Hazard.IF_ID_rs2[31:0]
+@28
+TOP.miniRV_SoC.Core_cpu.Hazard.hazard_A1
+TOP.miniRV_SoC.Core_cpu.Hazard.hazard_A2
+TOP.miniRV_SoC.Core_cpu.Hazard.hazard_B1
+TOP.miniRV_SoC.Core_cpu.Hazard.hazard_B2
+TOP.miniRV_SoC.Core_cpu.Hazard.hazard_C1
+TOP.miniRV_SoC.Core_cpu.Hazard.hazard_C2
+[pattern_trace] 1
+[pattern_trace] 0

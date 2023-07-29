@@ -23,7 +23,11 @@ module miniRV_sim();
         fpga_clk = 0;
         #23
         fpga_rst = 0;
+        #2
         switch   = 24'h20_12_34;
+        #1000
+        switch   = 24'h200_037;
+        #1000
         button   = 5'h0;
     end
 
@@ -32,7 +36,7 @@ module miniRV_sim();
     miniRV_SoC DUT (
         .fpga_rst   (fpga_rst),
         .fpga_clk   (fpga_clk),
-        .switch     (switch),
+        .Switch     (switch),
         .button     (button),
         .dig_en     (dig_en),
         .DN_A       (DN_A),

@@ -1,0 +1,7 @@
+Running: xsim.dir/miniRV_sim_behav/xsimk.exe -simmode gui -wdb miniRV_sim_behav.wdb -simrunnum 0 -socket 53580
+Design successfully loaded
+Design Loading Memory Usage: 9400 KB (Peak: 9400 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 10484 KB (Peak: 10484 KB)
+Simulation CPU Usage: 15 ms

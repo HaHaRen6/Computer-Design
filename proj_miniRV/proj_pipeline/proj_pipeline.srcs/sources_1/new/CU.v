@@ -177,13 +177,23 @@ module CU (
                 CU_reg_RE2  = 1'b0;
             end
             // J-type
-            default: begin
+            7'b1101111: begin
                 CU_npc_op   = NPC_JMP;
                 CU_rf_we    = 1'b1;
                 CU_rf_wsel  = WB_PC4;
                 CU_sext_op  = EXT_J;
                 CU_ram_we   = 1'b0;
                 CU_PC_sel   = 1'b1;
+                CU_reg_RE1  = 1'b0;
+                CU_reg_RE2  = 1'b0;
+            end
+            default: begin
+                CU_npc_op   = NPC_PC4;
+                CU_rf_we    = 1'b0;
+                CU_rf_wsel  = WB_PC4;
+                CU_sext_op  = EXT_I;
+                CU_ram_we   = 1'b0;
+                CU_PC_sel   = 1'b0;
                 CU_reg_RE1  = 1'b0;
                 CU_reg_RE2  = 1'b0;
             end

@@ -26,16 +26,12 @@ module IF (
         case (NPC_op)
             // NPC_PC4
             2'b00: NPC_npc = NPC_pc4;
-
             // NPC_B
             2'b01: NPC_npc = NPC_br ? NPC_pc + NPC_offset : NPC_pc4;
-
             // NPC_JMP
             2'b10: NPC_npc = NPC_pc + NPC_offset;
-
             // NPC_JALR
             default: NPC_npc = NPC_aluin;
-
         endcase
     end
 

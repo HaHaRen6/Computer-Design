@@ -1,0 +1,927 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Jul 21 09:25:38 2023
+# Process ID: 22580
+# Current directory: D:/School/cpu/proj_pipeline
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent21356 D:\School\cpu\proj_pipeline\proj_pipeline.xpr
+# Log file: D:/School/cpu/proj_pipeline/vivado.log
+# Journal file: D:/School/cpu/proj_pipeline\vivado.jou
+# Running On: HHR, OS: Windows, CPU Frequency: 3418 MHz, CPU Physical cores: 16, Host memory: 68476 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/School/cpu/proj_pipeline/proj_pipeline.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from 'D:/School/cpu/proj_miniRV/proj_pipeline' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+update_compile_order -fileset sources_1
+add_files -norecurse D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/defines.vh
+WARNING: [filemgmt 56-12] File 'D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/defines.vh' cannot be added to the project because it already exists in the project, skipping this file
+add_files -norecurse {D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/CU.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LEDs.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_WB.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v}
+WARNING: [filemgmt 56-12] File 'D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v' cannot be added to the project because it already exists in the project, skipping this file
+update_compile_order -fileset sources_1
+create_ip -name clk_wiz -vendor xilinx.com -library ip -version 6.0 -module_name cpuclk
+set_property -dict [list \
+  CONFIG.CLKOUT1_DRIVES {BUFG} \
+  CONFIG.CLKOUT1_JITTER {203.457} \
+  CONFIG.CLKOUT1_PHASE_ERROR {155.540} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {50} \
+  CONFIG.CLKOUT2_DRIVES {BUFG} \
+  CONFIG.CLKOUT3_DRIVES {BUFG} \
+  CONFIG.CLKOUT4_DRIVES {BUFG} \
+  CONFIG.CLKOUT5_DRIVES {BUFG} \
+  CONFIG.CLKOUT6_DRIVES {BUFG} \
+  CONFIG.CLKOUT7_DRIVES {BUFG} \
+  CONFIG.Component_Name {cpuclk} \
+  CONFIG.MMCM_BANDWIDTH {OPTIMIZED} \
+  CONFIG.MMCM_CLKFBOUT_MULT_F {17} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {17} \
+  CONFIG.MMCM_COMPENSATION {ZHOLD} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {2} \
+  CONFIG.PRIMITIVE {PLL} \
+  CONFIG.USE_RESET {false} \
+] [get_ips cpuclk]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'cpuclk' to 'cpuclk' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'cpuclk'...
+generate_target all [get_files  d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'cpuclk'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'cpuclk'...
+catch { config_ip_cache -export [get_ips -all cpuclk] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: cpuclk
+export_ip_user_files -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci]
+launch_runs cpuclk_synth_1 -jobs 24
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: cpuclk
+[Fri Jul 21 09:28:43 2023] Launched cpuclk_synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/cpuclk_synth_1/runme.log
+export_simulation -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/cpuclk/cpuclk.xci] -directory D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name IROM
+set_property -dict [list \
+  CONFIG.Component_Name {IROM} \
+  CONFIG.data_width {32} \
+  CONFIG.depth {16384} \
+  CONFIG.memory_type {rom} \
+] [get_ips IROM]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'IROM' to 'IROM' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'IROM'...
+generate_target all [get_files  d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'IROM'...
+catch { config_ip_cache -export [get_ips -all IROM] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+export_ip_user_files -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+launch_runs IROM_synth_1 -jobs 24
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+[Fri Jul 21 09:30:07 2023] Launched IROM_synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/IROM_synth_1/runme.log
+export_simulation -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -directory D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+create_ip -name dist_mem_gen -vendor xilinx.com -library ip -version 8.0 -module_name DRAM
+set_property -dict [list \
+  CONFIG.Component_Name {DRAM} \
+  CONFIG.data_width {32} \
+  CONFIG.depth {16384} \
+] [get_ips DRAM]
+WARNING: [Vivado 12-3523] Attempt to change 'Component_Name' from 'DRAM' to 'DRAM' is not allowed and is ignored.
+generate_target {instantiation_template} [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'DRAM'...
+generate_target all [get_files  d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'DRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'DRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'DRAM'...
+catch { config_ip_cache -export [get_ips -all DRAM] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: DRAM
+export_ip_user_files -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci]
+launch_runs DRAM_synth_1 -jobs 24
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: DRAM
+[Fri Jul 21 09:30:28 2023] Launched DRAM_synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/DRAM_synth_1/runme.log
+export_simulation -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/DRAM/DRAM.xci] -directory D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property CONFIG.coefficient_file {D:/School/cpu/proj_pipeline/123.coe} [get_ips IROM]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/School/cpu/proj_pipeline/123.coe' provided. It will be converted relative to IP Instance files '../../../../123.coe'
+generate_target all [get_files  d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'IROM'...
+catch { config_ip_cache -export [get_ips -all IROM] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+export_ip_user_files -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -no_script -sync -force -quiet
+reset_run IROM_synth_1
+launch_runs IROM_synth_1 -jobs 24
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+[Fri Jul 21 09:32:50 2023] Launched IROM_synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/IROM_synth_1/runme.log
+export_simulation -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -directory D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LEDs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LEDs
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-3180] cannot find port 'switch' on this module [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v:35]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_runs synth_1 -jobs 24
+[Fri Jul 21 09:33:49 2023] Launched synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 24
+[Fri Jul 21 09:35:09 2023] Launched synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LEDs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LEDs
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'RF_wR' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata_to_led' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'rdata_from_sw' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:184]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=17,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.ID_WB
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.myCPU
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.Bridge
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DRAM
+Compiling module xil_defaultlib.LED
+Compiling module xil_defaultlib.Digital_LEDs
+Compiling module xil_defaultlib.miniRV_SoC
+Compiling module xil_defaultlib.miniRV_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot miniRV_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2032.547 ; gain = 20.484
+run 10 us
+save_wave_config {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg}
+add_files -fileset sim_1 -norecurse D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg
+set_property xsim.view D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'RF_wR' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata_to_led' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'rdata_from_sw' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:184]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -view {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'RF_wR' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata_to_led' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'rdata_from_sw' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:184]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -view {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/School/cpu/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs synth_1 -jobs 24
+[Fri Jul 21 09:45:05 2023] Launched synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+set_property CONFIG.coefficient_file {D:/School/cpu/lab1-riscv-asm/ideal_pipeline.coe} [get_ips IROM]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/School/cpu/lab1-riscv-asm/ideal_pipeline.coe' provided. It will be converted relative to IP Instance files '../../../../../lab1-riscv-asm/ideal_pipeline.coe'
+generate_target all [get_files  d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'IROM'...
+catch { config_ip_cache -export [get_ips -all IROM] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+export_ip_user_files -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -no_script -sync -force -quiet
+reset_run IROM_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/School/cpu/proj_pipeline/proj_pipeline.runs/IROM_synth_1
+
+launch_runs IROM_synth_1 -jobs 24
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+[Fri Jul 21 09:52:35 2023] Launched IROM_synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/IROM_synth_1/runme.log
+export_simulation -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -directory D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/ideal_pipeline.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LEDs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LEDs
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'RF_wR' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata_to_led' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'rdata_from_sw' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:184]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=17,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.ID_WB
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.myCPU
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.Bridge
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DRAM
+Compiling module xil_defaultlib.LED
+Compiling module xil_defaultlib.Digital_LEDs
+Compiling module xil_defaultlib.miniRV_SoC
+Compiling module xil_defaultlib.miniRV_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot miniRV_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -view {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2214.070 ; gain = 2.152
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/ideal_pipeline.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LEDs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LEDs
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'RF_wR' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata_to_led' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'rdata_from_sw' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:184]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=17,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.ID_WB
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.myCPU
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.Bridge
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DRAM
+Compiling module xil_defaultlib.LED
+Compiling module xil_defaultlib.Digital_LEDs
+Compiling module xil_defaultlib.miniRV_SoC
+Compiling module xil_defaultlib.miniRV_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot miniRV_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -view {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2214.660 ; gain = 0.461
+set_property CONFIG.coefficient_file {D:/School/cpu/lab1-riscv-asm/ideal_pipeline.coe} [get_ips IROM]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/School/cpu/lab1-riscv-asm/ideal_pipeline.coe' provided. It will be converted relative to IP Instance files '../../../../../lab1-riscv-asm/ideal_pipeline.coe'
+generate_target all [get_files  d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'IROM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'IROM'...
+catch { config_ip_cache -export [get_ips -all IROM] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+export_ip_user_files -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -no_script -sync -force -quiet
+reset_run IROM_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/School/cpu/proj_pipeline/proj_pipeline.runs/IROM_synth_1
+
+launch_runs IROM_synth_1 -jobs 24
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: IROM
+[Fri Jul 21 09:56:52 2023] Launched IROM_synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/IROM_synth_1/runme.log
+export_simulation -of_objects [get_files d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/IROM.xci] -directory D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/sim_scripts -ip_user_files_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files -ipstatic_source_dir D:/School/cpu/proj_pipeline/proj_pipeline.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/modelsim} {questa=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/questa} {riviera=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/riviera} {activehdl=D:/School/cpu/proj_pipeline/proj_pipeline.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/School/cpu/proj_pipeline/proj_pipeline.runs/synth_1
+
+launch_runs synth_1 -jobs 24
+[Fri Jul 21 09:57:53 2023] Launched synth_1...
+Run output will be captured here: D:/School/cpu/proj_pipeline/proj_pipeline.runs/synth_1/runme.log
+set_property CONFIG.coefficient_file {d:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/ideal_pipeline.coe} [get_ips IROM]
+INFO: [IP_Flow 19-3484] Absolute path of file 'd:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/ip/IROM/ideal_pipeline.coe' provided. It will be converted relative to IP Instance files 'ideal_pipeline.coe'
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/ideal_pipeline.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/ideal_pipeline.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/DRAM/sim/DRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/IROM/sim/IROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.gen/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cpuclk
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Bridge.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Bridge
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/Digital_LEDs.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Digital_LEDs
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/EX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module EX
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/ID_WB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ID_WB
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/IF.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module IF
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/LED.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LED
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_SoC
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myCPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sim_1/new/miniRV_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module miniRV_sim
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'RF_wR' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata_to_led' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'rdata_from_sw' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:184]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.PLLE2_ADV(CLKFBOUT_MULT=17,CLKIN...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.cpuclk_clk_wiz
+Compiling module xil_defaultlib.cpuclk
+Compiling module xil_defaultlib.IF
+Compiling module xil_defaultlib.ID_WB
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.EX
+Compiling module xil_defaultlib.myCPU
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.IROM
+Compiling module xil_defaultlib.Bridge
+Compiling module dist_mem_gen_v8_0_13.dist_mem_gen_v8_0_13(C_FAMILY="a...
+Compiling module xil_defaultlib.DRAM
+Compiling module xil_defaultlib.LED
+Compiling module xil_defaultlib.Digital_LEDs
+Compiling module xil_defaultlib.miniRV_SoC
+Compiling module xil_defaultlib.miniRV_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot miniRV_sim_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -view {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 2217.418 ; gain = 2.758
+save_wave_config {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'miniRV_sim'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'miniRV_sim' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/IROM.mif'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/ideal_pipeline.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/123.coe'
+INFO: [SIM-utils-43] Exported 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim/ideal_pipeline.coe'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj miniRV_sim_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L dist_mem_gen_v8_0_13 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot miniRV_sim_behav xil_defaultlib.miniRV_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 5 for port 'RF_wR' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/myCPU.v:129]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata_to_led' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:157]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'rdata_from_sw' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:160]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 24 for port 'wdata' [D:/School/cpu/proj_pipeline/proj_pipeline.srcs/sources_1/new/miniRV_SoC.v:184]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/School/cpu/proj_pipeline/proj_pipeline.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "miniRV_sim_behav -key {Behavioral:sim_1:Functional:miniRV_sim} -tclbatch {miniRV_sim.tcl} -view {D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config D:/School/cpu/proj_pipeline/miniRV_sim_behav.wcfg
+source miniRV_sim.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'miniRV_sim_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 21 10:33:24 2023...

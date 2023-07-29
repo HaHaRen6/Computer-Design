@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="miniRV_sim_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="miniRV_sim" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="9.467 ns"></ZoomStartTime>
+      <ZoomEndTime time="177.668 ns"></ZoomEndTime>
+      <Cursor1Time time="41.067 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="132"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="48" />
+   <wvobject fp_name="/miniRV_sim/fpga_rst" type="logic">
+      <obj_property name="ElementShortName">fpga_rst</obj_property>
+      <obj_property name="ObjectShortName">fpga_rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/fpga_clk" type="logic">
+      <obj_property name="ElementShortName">fpga_clk</obj_property>
+      <obj_property name="ObjectShortName">fpga_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/switch" type="array">
+      <obj_property name="ElementShortName">switch[23:0]</obj_property>
+      <obj_property name="ObjectShortName">switch[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/button" type="array">
+      <obj_property name="ElementShortName">button[4:0]</obj_property>
+      <obj_property name="ObjectShortName">button[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/dig_en" type="array">
+      <obj_property name="ElementShortName">dig_en[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dig_en[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/led" type="array">
+      <obj_property name="ElementShortName">led[23:0]</obj_property>
+      <obj_property name="ObjectShortName">led[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/IF/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/IF/PC_pc" type="array">
+      <obj_property name="ElementShortName">PC_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/IF/PC_pc4" type="array">
+      <obj_property name="ElementShortName">PC_pc4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_pc4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/IF/PC_din" type="logic">
+      <obj_property name="ElementShortName">PC_din</obj_property>
+      <obj_property name="ObjectShortName">PC_din</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/IF_ID_pc" type="array">
+      <obj_property name="ElementShortName">IF_ID_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IF_ID_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/IF_ID_pc4" type="array">
+      <obj_property name="ElementShortName">IF_ID_pc4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IF_ID_pc4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/IF_ID_inst" type="array">
+      <obj_property name="ElementShortName">IF_ID_inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">IF_ID_inst[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_WB/RF_rR1" type="array">
+      <obj_property name="ElementShortName">RF_rR1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RF_rR1[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_WB/RF_rR2" type="array">
+      <obj_property name="ElementShortName">RF_rR2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">RF_rR2[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_WB/RF_rD1" type="array">
+      <obj_property name="ElementShortName">RF_rD1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RF_rD1[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_WB/RF_rD2" type="array">
+      <obj_property name="ElementShortName">RF_rD2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RF_rD2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_WB/SEXT_ext" type="array">
+      <obj_property name="ElementShortName">SEXT_ext[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SEXT_ext[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_opA" type="array">
+      <obj_property name="ElementShortName">ID_EX_opA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_opA[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_opB" type="array">
+      <obj_property name="ElementShortName">ID_EX_opB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_opB[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_CU_ram_we" type="logic">
+      <obj_property name="ElementShortName">ID_EX_CU_ram_we</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_CU_ram_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_CU_alu_op" type="array">
+      <obj_property name="ElementShortName">ID_EX_CU_alu_op[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_CU_alu_op[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_CU_rf_wsel" type="array">
+      <obj_property name="ElementShortName">ID_EX_CU_rf_wsel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_CU_rf_wsel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_CU_rf_we" type="logic">
+      <obj_property name="ElementShortName">ID_EX_CU_rf_we</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_CU_rf_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_CU_npc_op" type="array">
+      <obj_property name="ElementShortName">ID_EX_CU_npc_op[1:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_CU_npc_op[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_rD2" type="array">
+      <obj_property name="ElementShortName">ID_EX_rD2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_rD2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_rd" type="array">
+      <obj_property name="ElementShortName">ID_EX_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_rd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_pc" type="array">
+      <obj_property name="ElementShortName">ID_EX_pc[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_pc[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_pc4" type="array">
+      <obj_property name="ElementShortName">ID_EX_pc4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_pc4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/ID_EX_SEXT_ext" type="array">
+      <obj_property name="ElementShortName">ID_EX_SEXT_ext[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ID_EX_SEXT_ext[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX/ALU_A" type="array">
+      <obj_property name="ElementShortName">ALU_A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX/ALU_B" type="array">
+      <obj_property name="ElementShortName">ALU_B[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_B[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX/ALU_op" type="array">
+      <obj_property name="ElementShortName">ALU_op[3:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_op[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX/ALU_C" type="array">
+      <obj_property name="ElementShortName">ALU_C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_C[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX/ALU_f" type="logic">
+      <obj_property name="ElementShortName">ALU_f</obj_property>
+      <obj_property name="ObjectShortName">ALU_f</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_CU_ram_we" type="array">
+      <obj_property name="ElementShortName">EX_MEM_CU_ram_we[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_CU_ram_we[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_CU_rf_wsel" type="array">
+      <obj_property name="ElementShortName">EX_MEM_CU_rf_wsel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_CU_rf_wsel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_ALU_C" type="array">
+      <obj_property name="ElementShortName">EX_MEM_ALU_C[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_ALU_C[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_rD2" type="array">
+      <obj_property name="ElementShortName">EX_MEM_rD2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_rD2[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_rd" type="array">
+      <obj_property name="ElementShortName">EX_MEM_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_rd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_pc4" type="array">
+      <obj_property name="ElementShortName">EX_MEM_pc4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_pc4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_CU_rf_we" type="logic">
+      <obj_property name="ElementShortName">EX_MEM_CU_rf_we</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_CU_rf_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/EX_MEM_SEXT_ext" type="array">
+      <obj_property name="ElementShortName">EX_MEM_SEXT_ext[31:0]</obj_property>
+      <obj_property name="ObjectShortName">EX_MEM_SEXT_ext[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/MEM_WB_rf_wD" type="array">
+      <obj_property name="ElementShortName">MEM_WB_rf_wD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_rf_wD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/MEM_WB_pc4" type="array">
+      <obj_property name="ElementShortName">MEM_WB_pc4[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_pc4[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/MEM_WB_rd" type="array">
+      <obj_property name="ElementShortName">MEM_WB_rd[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_rd[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/MEM_WB_CU_rf_we" type="logic">
+      <obj_property name="ElementShortName">MEM_WB_CU_rf_we</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_CU_rf_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/miniRV_sim/DUT/Core_cpu/MEM_WB_SEXT_ext" type="array">
+      <obj_property name="ElementShortName">MEM_WB_SEXT_ext[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MEM_WB_SEXT_ext[31:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -73,17 +73,20 @@ module myCPU (
     reg [ 1:0]  ID_EX_CU_rf_wsel;
     reg         ID_EX_CU_rf_we;
     reg [ 1:0]  ID_EX_CU_npc_op;
+    // TODO
     reg [31:0]  ID_EX_rD2;
-    reg [4:0]  ID_EX_rd;
+    reg [ 4:0]  ID_EX_rd;
     reg [31:0]  ID_EX_pc;
     reg [31:0]  ID_EX_pc4;
     reg [31:0]  ID_EX_SEXT_ext;
+    reg ID_EX_last_CU_PC_sel;
+    reg ID_EX_CU_PC_sel;
 
     reg [31:0]  EX_MEM_CU_ram_we;
     reg [ 1:0]  EX_MEM_CU_rf_wsel;
     reg [31:0]  EX_MEM_ALU_C;
     reg [31:0]  EX_MEM_rD2;
-    reg [4:0]  EX_MEM_rd;
+    reg [ 4:0]  EX_MEM_rd;
     reg [31:0]  EX_MEM_pc4;
     reg [31:0]  EX_MEM_pc;
     reg         EX_MEM_CU_rf_we;
@@ -91,18 +94,30 @@ module myCPU (
     
     reg [31:0]  MEM_WB_rf_wD;
     reg [31:0]  MEM_WB_pc;
-    reg [4:0]  MEM_WB_rd;
+    reg [ 4:0]  MEM_WB_rd;
     reg         MEM_WB_CU_rf_we;
     // reg [31:0]  MEM_WB_SEXT_ext;
+    reg IF_have_inst;
+    reg IF_ID_have_inst;
+    reg ID_EX_have_inst;
+    reg EX_MEM_have_inst;
+    reg MEM_WB_have_inst;
 
     wire suspend_PC;
     wire suspend_IF_ID;
     wire suspend_ID_EX;
+    wire suspend_continue;
+    reg suspend_continue1;
 
-    wire JMP_suspend = (IROM_inst[6:0] == 7'b1100011) | (IROM_inst[6:0] == 7'b1101111) | (IROM_inst[6:0] == 7'b1100111);
+    always @ (posedge cpu_clk or posedge cpu_rst) begin
+        if (cpu_rst) suspend_continue1 <= 0;
+        else suspend_continue1 <= suspend_continue;
+    end
 
-    wire PC_din2 = CU_PC_sel ? NPC_npc : PC_pc4;
-    assign PC_din = suspend_PC ? PC_pc : PC_din2;
+    wire JMP_suspend = (~suspend_continue) & ((IROM_inst[6:0] == 7'b1100011) | (IROM_inst[6:0] == 7'b1101111) | (IF_ID_inst[6:0] == 7'b1100111));
+
+    wire [31:0] PC_din2 = (ID_EX_CU_PC_sel) ? NPC_npc : PC_pc4;
+    assign PC_din = (~suspend_continue & suspend_PC) ? PC_pc : PC_din2;
 
     IF IF (
         // input
@@ -122,11 +137,20 @@ module myCPU (
             IF_ID_pc <= 32'b0;
             IF_ID_pc4 <= 32'b0;
             IF_ID_inst <= 32'b0;
+            IF_have_inst <= 1'b0;
+            IF_ID_have_inst <= 1'b0;
         end
-        else if (suspend_IF_ID) begin
+        else if (~suspend_IF_ID | suspend_continue) begin
             IF_ID_pc <= PC_pc;
             IF_ID_pc4 <= PC_pc4;
             IF_ID_inst <= IROM_inst;
+            IF_have_inst <= 1'b1;
+            IF_ID_have_inst <= IF_have_inst;
+        end
+        else begin 
+            if (suspend_continue) IF_have_inst <= 1'b1;
+            else IF_have_inst <= 1'b0;
+            IF_ID_have_inst <=1'b0;
         end
     end
 
@@ -182,8 +206,11 @@ module myCPU (
             ID_EX_SEXT_ext <= 32'b0;
             ID_EX_pc4 <= 32'b0;
             ID_EX_pc <= 32'b0;
+            ID_EX_have_inst <= 1'b0;
+            ID_EX_last_CU_PC_sel <= 1'b0;
+            ID_EX_CU_PC_sel <= 1'b0;
         end
-        else if (suspend_ID_EX) begin
+        else if (~suspend_ID_EX | suspend_continue) begin
             ID_EX_opA <= RF_rD1;
             ID_EX_opB <= CU_alub_sel ? SEXT_ext : RF_rD2;
             ID_EX_CU_ram_we <= CU_ram_we;
@@ -196,7 +223,11 @@ module myCPU (
             ID_EX_SEXT_ext <= SEXT_ext;
             ID_EX_pc4 <= IF_ID_pc4;
             ID_EX_pc <= IF_ID_pc;
+            ID_EX_have_inst <= IF_ID_have_inst;
+            ID_EX_last_CU_PC_sel <= CU_PC_sel;
+            ID_EX_CU_PC_sel <= ~ID_EX_last_CU_PC_sel & CU_PC_sel; // 检测上升沿
         end
+        else ID_EX_have_inst <=1'b0;
     end
 
 
@@ -229,6 +260,7 @@ module myCPU (
             EX_MEM_SEXT_ext <= 32'b0;
             EX_MEM_pc4 <= 32'b0;
             EX_MEM_pc <= 32'b0;
+            EX_MEM_have_inst <= 1'b0;
         end
         else begin
             EX_MEM_CU_rf_we <= ID_EX_CU_rf_we;
@@ -240,18 +272,19 @@ module myCPU (
             EX_MEM_SEXT_ext <= ID_EX_SEXT_ext;
             EX_MEM_pc4 <= ID_EX_pc4;
             EX_MEM_pc <= ID_EX_pc;
+            EX_MEM_have_inst <= ID_EX_have_inst;
         end
     end
 
     // DRAM
-    always @(posedge cpu_clk or posedge cpu_rst) begin
+    always @(posedge cpu_clk) begin
         Bus_addr <= EX_MEM_ALU_C;
         Bus_wen <= EX_MEM_CU_ram_we;
         Bus_wdata <= EX_MEM_rD2;
     end
 
 
-    // MEM_WE 段寄存器
+    // MEM_WB 段寄存器
     
     always @ (posedge cpu_clk or posedge cpu_rst) begin
         if (cpu_rst) begin
@@ -259,11 +292,13 @@ module myCPU (
             MEM_WB_rd <= 5'b0;
             MEM_WB_rf_wD <= 32'b0;
             MEM_WB_pc <= 32'b0;
+            MEM_WB_have_inst <= 1'b0;
         end
         else begin
             MEM_WB_CU_rf_we <= EX_MEM_CU_rf_we;
             MEM_WB_rd <= EX_MEM_rd;
             MEM_WB_pc <= EX_MEM_pc;
+            MEM_WB_have_inst <= EX_MEM_have_inst;
             case(EX_MEM_CU_rf_wsel)
                 2'b00: MEM_WB_rf_wD <= EX_MEM_ALU_C;
                 2'b01: MEM_WB_rf_wD <= EX_MEM_SEXT_ext;
@@ -279,8 +314,8 @@ module myCPU (
         .rst(cpu_rst),
         .clk(cpu_clk),
         .JMP_suspend(JMP_suspend),
-        .IF_ID_rs1(IF_ID_rs1),
-        .IF_ID_rs2(IF_ID_rs2),
+        .IF_ID_rs1(IF_ID_inst[19:15]),
+        .IF_ID_rs2(IF_ID_inst[24:20]),
         .ID_reg_re1(CU_reg_RE1),
         .ID_reg_re2(CU_reg_RE2),
         .ID_EX_CU_rf_we(ID_EX_CU_rf_we),
@@ -292,13 +327,14 @@ module myCPU (
         // output
         .suspend_PC(suspend_PC),
         .suspend_IF_ID(suspend_IF_ID),
-        .suspend_ID_EX(suspend_ID_EX)
+        .suspend_ID_EX(suspend_ID_EX),
+        .suspend_continue(suspend_continue)
     );
 
 `ifdef RUN_TRACE
     // Debug Interface
-    assign debug_wb_have_inst = ~cpu_rst; //TODO
-    assign debug_wb_pc        = MEM_WB_pc;
+    assign debug_wb_have_inst = (~cpu_rst) & MEM_WB_have_inst; //TODO
+    assign debug_wb_pc        = (MEM_WB_pc == 32'hFFFF_FFFC) ? 32'h0 : MEM_WB_pc;
     assign debug_wb_ena       = MEM_WB_CU_rf_we;
     assign debug_wb_reg       = MEM_WB_rd;
     assign debug_wb_value     = MEM_WB_rf_wD;

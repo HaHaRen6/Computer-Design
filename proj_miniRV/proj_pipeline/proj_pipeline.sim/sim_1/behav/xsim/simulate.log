@@ -1,0 +1,5 @@
+Time resolution is 1 ps
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING: This core is supplied with a behavioral model. To model cycle-accurate behavior you must run timing simulation.
+WARNING in miniRV_sim.DUT.Mem_DRAM.inst at time                35000 ns: 
+Reading from out-of-range address. Max address in miniRV_sim.DUT.Mem_DRAM.inst is       16383
